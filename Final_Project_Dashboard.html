@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Default Risk Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        /* Custom styles for D3 elements */
+        .line { fill: none; stroke-width: 3px; }
+        .bar { transition: fill 0.3s ease; }
+        .bar:hover { opacity: 0.8; }
+        .axis line, .axis path { stroke: #e5e7eb; } /* Light gray stroke for axes */
+        .axis text { fill: #000; font-size: 12px; }
+        .chart-title { font-weight: 600; font-size: 1.125rem; }
+
+        /* Styling for Tooltips */
+        .d3-tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 8px;
+            font: 12px sans-serif;
+            background: #374151;
+            color: white;
+            border: 0px;
+            border-radius: 4px;
+            pointer-events: none; /* Allows mouse events to pass through */
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-indigo-700">Credit Card Default Risk Dashboard</h1>
+            <p class="text-gray-500">Comparing financial trends and delinquency progression between defaulters and non-defaulters across six months</p>
+            <p class="text-gray-500">(1.00 New Taiwan dollar = 0.032 United States dollar)</p>
+        </header>
+
+        <div id="loading" class="text-center p-8 text-xl text-indigo-500">
+            Loading and processing data from multiple CSV files...
+        </div>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-indigo-600">Financial Trend Over Time</h2>
+            <div id="financial-trends" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div id="bill-amt-trend" class="bg-white p-4 rounded-lg shadow-md col-span-1" style="height: 400px;"></div>
+                <div id="pay-amt-trend" class="bg-white p-4 rounded-lg shadow-md col-span-1" style="height: 400px;"></div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-indigo-600">Delinquency Progression</h2>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                 <div id="pay-status-progression" style="height: 500px;"></div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-indigo-600">Cross-Sectional Demographic Analysis</h2>
+            
+            <div class="mb-4 flex items-center space-x-2">
+                <label for="default-status-filter" class="font-medium text-gray-700">Filter by Default Status:</label>
+                <select id="default-status-filter" class="p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    <option value="All">All Clients</option>
+                    <option value="Defaulter">Defaulters Only</option>
+                    <option value="Non-Defaulter">Non-Defaulters Only</option>
+                </select>
+            </div>
+            <div id="categorical-comparisons" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div id="sex-chart" class="bg-white p-4 rounded-lg shadow-md col-span-1"></div>
+                <div id="education-chart" class="bg-white p-4 rounded-lg shadow-md col-span-1"></div>
+                <div id="marriage-chart" class="bg-white p-4 rounded-lg shadow-md col-span-1"></div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-indigo-600">Distribution Analysis</h2>
+            <div id="financial-analysis" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div id="limit-bal-chart" class="bg-white p-4 rounded-lg shadow-md col-span-1"></div>
+                <div id="age-chart" class="bg-white p-4 rounded-lg shadow-md col-span-1"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script type="module">
+        // --- D3 Dashboard Setup ---
+
+        const dataPaths = {
+            default: 'cleaned_default_data_sample_1000.csv',
+            bill: 'cleaned_bill_amt_sample_1000.csv',
+            payAmt: 'cleaned_pay_amt_sample_1000.csv',
+            payStatus: 'cleaned_pay_status_sample_1000.csv',
+        };
+
+        const MARGIN = { top: 30, right: 30, bottom: 60, left: 60 };
+        const MONTHS = ['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6'];
+        
+        // Define Pay Status Groups and Colors
+        const NEGATIVE_STATUSES = ['Delay 6+ Months', 'Delay 5 Months', 'Delay 4 Months', 'Delay 3 Months', 'Delay 2 Months', 'Delay 1 Month'];
+        const POSITIVE_STATUSES = ['Revolving Credit', 'Payment Delayed', 'Account Closed'];
+        
+        // Final stack order: Delays (Worst) at the bottom, then better statuses.
+        const ALL_STATUSES_ORDERED = [
+            'Delay 6+ Months', 
+            'Delay 5 Months', 
+            'Delay 4 Months', 
+            'Delay 3 Months', 
+            'Delay 2 Months', 
+            'Delay 1 Month',
+            'Payment Delayed', // Note: This is usually the least severe delay or a "bad" status.
+            'Revolving Credit', 
+            'Account Closed'
+        ];
+        
+        // Colors: Reds for Delays (Negative), Greens for Positive/Normal
+        // Reversing NEGATIVE_COLORS for the stack: darkest red (worst status) is lowest on the bar.
+        const NEGATIVE_COLORS = ['#FFE4B5', '#FFB347', '#F4A460', '#E97451',  '#CD5C5C', '#8B0000'].reverse(); // Delay 6+ gets '#881337' (darkest)
+        const POSITIVE_COLORS = [ '#87CEEB', '#4682B4', '#2F4F4F']; // Light Green to Dark Green (best status gets darkest green)
+
+        const PAY_STATUS_COLORS = d3.scaleOrdinal()
+            .domain(ALL_STATUSES_ORDERED)
+            .range([...NEGATIVE_COLORS, ...POSITIVE_COLORS]);
+
+        const COLORS = {
+            Defaulter: '#E97451', // Burnt Sienna
+            'Non-Defaulter': '#4682B4', // Steel Blue
+            PayStatus: PAY_STATUS_COLORS
+        };
+        
+        // Month sorting function for time series
+        const monthSort = (a, b) => MONTHS.indexOf(a.month) - MONTHS.indexOf(b.month);
+
+        // Tooltip setup
+        const tooltip = d3.select("body").append("div")
+            .attr("class", "d3-tooltip");
+            
+        // ** Global variable to hold base data **
+        let baseDefaultData = []; 
+
+        /**
+         * Helper to find the correct default column name and map the value consistently.
+         */
+        function mapDefaultStatus(d) {
+            const defaultKey = Object.keys(d).find(key => key.trim().toLowerCase() === 'default');
+            const defaultValue = defaultKey ? d[defaultKey] : undefined;
+
+            if (defaultValue === undefined || defaultValue === null) return null;
+
+            const rawValue = String(defaultValue).trim().toLowerCase();
+            
+            if (rawValue === 'defaulter' || rawValue === '1') {
+                return 'Defaulter';
+            } else if (rawValue === 'non-defaulter' || rawValue === '0') {
+                return 'Non-Defaulter';
+            } else {
+                return null;
+            }
+        }
+
+        /**
+         * Utility to get the width of a container
+         */
+        const getContainerWidth = (id) => {
+            const container = document.getElementById(id);
+            return container ? container.clientWidth : 400; 
+        };
+        
+        // --- TIME-SERIES CHARTS ---
+        
+        /**
+         * Creates a Line Chart showing average trend of a metric over six months.
+         */
+        function createLineChart(data, metricKey, title, yLabel, elementId) {
+            const container = document.getElementById(elementId);
+            const containerWidth = container.clientWidth;
+            const containerHeight = container.clientHeight;
+            const width = containerWidth - MARGIN.left - MARGIN.right;
+            const height = containerHeight - MARGIN.top - MARGIN.bottom;
+
+            // 1. Scales
+            const x = d3.scalePoint()
+                .domain(MONTHS)
+                .range([0, width]);
+
+            const yMax = d3.max(data, d => d[metricKey]);
+            const y = d3.scaleLinear()
+                .domain([0, yMax * 1.05]).nice()
+                .range([height, 0]);
+
+            // 2. Line Generator
+            const lineGenerator = d3.line()
+                .x(d => x(d.month))
+                .y(d => y(d[metricKey]));
+
+            // 3. Group data by default status
+            const nestedData = Array.from(d3.group(data, d => d.default), ([key, values]) => ({
+                status: key,
+                values: values.sort(monthSort)
+            }));
+            
+            // 4. SVG Setup
+            d3.select(`#${elementId}`).html(''); // Clear previous content
+            const svg = d3.select(`#${elementId}`)
+                .append("svg")
+                .attr("viewBox", `0 0 ${containerWidth} ${containerHeight}`)
+                .append("g")
+                .attr("transform", `translate(${MARGIN.left},${MARGIN.top})`);
+            
+            // 5. Drawing Lines
+            svg.selectAll(".trend-line")
+                .data(nestedData)
+                .join("path")
+                .attr("class", "trend-line line")
+                .attr("d", d => lineGenerator(d.values))
+                .attr("stroke", d => COLORS[d.status]);
+            
+            // 6. Drawing Points and Tooltips
+            svg.selectAll(".data-points")
+                .data(nestedData)
+                .join("g")
+                .attr("class", "data-points")
+                .attr("fill", d => COLORS[d.status])
+                .selectAll("circle")
+                .data(d => d.values)
+                .join("circle")
+                .attr("r", 5)
+                .attr("cx", d => x(d.month))
+                .attr("cy", d => y(d[metricKey]))
+                .on("mouseover", function(event, d) {
+                    tooltip.style("opacity", 1)
+                        .html(`
+                            <span class="font-bold">${d.default} - ${d.month}</span><br>
+                            ${yLabel}: ${d3.format(",.0f")(d[metricKey])}
+                        `);
+                    d3.select(this).attr("r", 7);
+                })
+                .on("mousemove", (event) => {
+                    tooltip.style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 20) + "px");
+                })
+                .on("mouseleave", function() {
+                    tooltip.style("opacity", 0);
+                    d3.select(this).attr("r", 5);
+                });
+
+            // 7. Axes
+            svg.append("g")
+                .attr("class", "axis x-axis")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            svg.append("g")
+                .attr("class", "axis y-axis")
+                .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".2s")));
+
+            // Y-Axis Label
+            svg.append("text")
+                .attr("text-anchor", "middle")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -MARGIN.left + 15)
+                .attr("x", -height / 2)
+                .text(yLabel);
+
+            // Title
+            svg.append("text")
+                .attr("class", "chart-title")
+                .attr("x", width / 2)
+                .attr("y", -10)
+                .attr("text-anchor", "middle")
+                .text(title);
+            
+            // Legend
+            const legend = svg.append("g")
+                .attr("transform", `translate(${width - 150}, 10)`);
+            
+            nestedData.forEach((d, i) => {
+                legend.append("rect")
+                    .attr("x", 0)
+                    .attr("y", i * 20)
+                    .attr("width", 10)
+                    .attr("height", 10)
+                    .attr("fill", COLORS[d.status]);
+                
+                legend.append("text")
+                    .attr("x", 15)
+                    .attr("y", i * 20 + 9)
+                    .attr("class", "text-sm fill-gray-600")
+                    .text(d.status);
+            });
+        }
+        
+        /**
+         * Creates a Small Multiples 100% Stacked Bar Chart for Payment Status Progression.
+         * @param {Array} data - The raw payment status data.
+         * @param {string} elementId - The ID of the container element.
+         */
+        function createPaymentStatusChart(data, elementId) {
+            const container = document.getElementById(elementId);
+            const containerWidth = container.clientWidth;
+            const containerHeight = container.clientHeight;
+            const MARGIN_SM = { top: 30, right: 100, bottom: 30, left: 60 }; 
+            const width = containerWidth - MARGIN_SM.left - MARGIN_SM.right;
+            const height = containerHeight - MARGIN_SM.top - MARGIN_SM.bottom;
+
+            // Define the grid layout
+            const numRows = 2; // Defaulters, Non-Defaulters
+            const numCols = MONTHS.length; // 6 Months
+            const colWidth = width / numCols;
+            const rowHeight = height / numRows;
+            const barWidth = 40; // Fixed width for the 100% bar in each multiple
+
+            // 1. Data Aggregation & Proportion Calculation
+            const aggregatedData = Array.from(d3.rollup(data, 
+                v => v.length, // count
+                d => d.default,
+                d => d.Pay_Month,
+                d => d.Pay_Status_Label
+            ));
+
+            const processedData = [];
+            Array.from(d3.group(data, d => d.default), ([defaultStatus, defaultValues]) => {
+                Array.from(d3.group(defaultValues, d => d.Pay_Month), ([month, monthValues]) => {
+                    const totalCount = monthValues.length;
+                    
+                    const composition = { default: defaultStatus, month: month, Total: totalCount };
+                    
+                    Array.from(d3.group(monthValues, d => d.Pay_Status_Label), ([statusLabel, statusValues]) => {
+                        composition[statusLabel] = statusValues.length / totalCount; // Calculate proportion
+                    });
+                    
+                    // Fill in zero for missing statuses for consistent stacking
+                    ALL_STATUSES_ORDERED.forEach(status => {
+                        if (composition[status] === undefined) {
+                            composition[status] = 0;
+                        }
+                    });
+                    
+                    processedData.push(composition);
+                });
+            });
+            
+            // 2. Stack Generator
+            const stack = d3.stack()
+                .keys(ALL_STATUSES_ORDERED)
+                .order(d3.stackOrderNone)
+                .offset(d3.stackOffsetNone);
+
+            const stackedData = stack(processedData);
+
+            // 3. Scales
+            // Y-Scale: for the 100% height
+            const y = d3.scaleLinear()
+                .domain([0, 1]) 
+                .range([rowHeight * 0.8, 0]); // Use 80% of the row height
+
+            // X-Scale: for positioning multiples
+            const xMultiples = d3.scalePoint()
+                .domain(MONTHS)
+                .range([colWidth / 2, width - colWidth / 2]);
+
+
+            // 4. SVG Setup
+            d3.select(`#${elementId}`).html('');
+            const svg = d3.select(`#${elementId}`)
+                .append("svg")
+                .attr("viewBox", `0 0 ${containerWidth} ${containerHeight}`)
+                .append("g")
+                .attr("transform", `translate(${MARGIN_SM.left},${MARGIN_SM.top})`);
+            
+            // Title
+            svg.append("text")
+                .attr("class", "chart-title")
+                .attr("x", width / 2)
+                .attr("y", -10)
+                .attr("text-anchor", "middle")
+                .text("Payment Status Composition (100% Stacked Bars)");
+                
+            // Helper to get panel position
+            const getPanelY = (status) => {
+                return status === 'Non-Defaulter' ? 0 : rowHeight;
+            };
+
+            // 5. Drawing Small Multiples
+            const groups = svg.selectAll(".month-group")
+                .data(processedData)
+                .join("g")
+                .attr("class", d => `month-group ${d.default.toLowerCase().replace('-', '')}`)
+                // Position each multiple on the grid
+                .attr("transform", d => {
+                    const xPos = xMultiples(d.month) - barWidth / 2;
+                    const yPos = getPanelY(d.default);
+                    return `translate(${xPos}, ${yPos})`;
+                });
+                
+            // Draw the stacked bars inside each group
+            groups.selectAll(".bar-segment")
+                // Filter the stacked data for the current month/status combination
+                .data(d => stackedData.map(stackLayer => {
+                    const segment = stackLayer.find(s => s.data.month === d.month && s.data.default === d.default);
+                    return segment ? {
+                        key: stackLayer.key, 
+                        value: segment, 
+                        data: d
+                    } : null;
+                }).filter(Boolean))
+                .join("rect")
+                .attr("class", "bar-segment")
+                .attr("x", 0)
+                .attr("y", d => y(d.value[1])) // Top of segment
+                .attr("height", d => y(d.value[0]) - y(d.value[1])) // Height of segment
+                .attr("width", barWidth)
+                .attr("fill", d => COLORS.PayStatus(d.key))
+                .on("mouseover", function(event, d) {
+                    const proportion = d.data[d.key];
+                    tooltip.style("opacity", 1)
+                        .html(`
+                            <span class="font-bold">${d.data.default} - ${d.data.month}</span><br>
+                            Status: ${d.key}<br>
+                            Proportion: ${d3.format(".1%")(proportion)}
+                        `);
+                    d3.select(this).style("filter", "brightness(1.1)").style("stroke", "white").style("stroke-width", 1);
+                })
+                .on("mousemove", (event) => {
+                    tooltip.style("left", (event.pageX + 10) + "px").style("top", (event.pageY - 20) + "px");
+                })
+                .on("mouseleave", function() {
+                    tooltip.style("opacity", 0);
+                    d3.select(this).style("filter", "none").style("stroke", "none");
+                });
+
+            // 6. Axes and Titles
+            
+            // Y-Axis for Non-Defaulters (on the far left)
+            svg.append("g")
+                .attr("class", "axis y-axis-left")
+                .attr("transform", `translate(0, ${getPanelY('Non-Defaulter')})`)
+                .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".0%")));
+
+            // Y-Axis for Defaulters (on the gap)
+             svg.append("g")
+                .attr("class", "axis y-axis-left")
+                .attr("transform", `translate(0, ${getPanelY('Defaulter')})`)
+                .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".0%")));
+
+            // X-Axis (Month labels below each bar in each row)
+            groups.append("text")
+                .attr("class", "text-xs fill-gray-600")
+                .attr("x", barWidth / 2)
+                .attr("y", rowHeight * 0.8 + 15) // Position below the bar
+                .attr("text-anchor", "middle")
+                .text(d => d.month);
+                
+            // Row Titles
+            const rowTitles = ['Non-Defaulter', 'Defaulter'];
+            rowTitles.forEach(status => {
+                svg.append("text")
+                    .attr("x", -MARGIN_SM.left + 5)
+                    .attr("y", getPanelY(status) + rowHeight * 0.4) // Center vertically
+                    .attr("text-anchor", "start")
+                    .attr("dominant-baseline", "middle")
+                    .attr("class", "font-bold text-sm text-gray-800")
+                    .attr("fill", COLORS[status])
+                    .text(status);
+            });
+
+            // 7. Legend
+            const legend = svg.append("g")
+                .attr("transform", `translate(${width - 15}, 0)`); // Position legend to the right
+
+            ALL_STATUSES_ORDERED.forEach((label, i) => {
+                legend.append("rect")
+                    .attr("x", 0)
+                    .attr("y", i * 20)
+                    .attr("width", 10)
+                    .attr("height", 10)
+                    .attr("fill", COLORS.PayStatus(label));
+                
+                legend.append("text")
+                    .attr("x", 15)
+                    .attr("y", i * 20 + 9)
+                    .attr("class", "text-xs fill-gray-600")
+                    .text(label);
+            });
+        }
+
+
+        // --- ORIGINAL CATEGORICAL & DISTRIBUTION CHARTS (UPDATED) ---
+
+        /**
+         * Creates a Grouped/Simple Bar Chart for a categorical variable.
+         */
+        function createStackedBarChart(data, category, title, elementId, filterStatus = 'All') {
+            const containerWidth = getContainerWidth(elementId);
+            const width = containerWidth - MARGIN.left - MARGIN.right;
+            const height = 300 - MARGIN.top - MARGIN.bottom;
+
+            // 1. Data Aggregation based on filterStatus
+            let aggregatedData;
+            
+            if (filterStatus === 'All') {
+                // Grouped Bar (Defaulter vs. Non-Defaulter)
+                aggregatedData = Array.from(d3.group(data, d => d[category]), ([key, values]) => {
+                    const total = values.length;
+                    const defaulters = values.filter(d => d.default === 'Defaulter').length;
+                    return {
+                        category: key,
+                        Defaulter: defaulters,
+                        'Non-Defaulter': total - defaulters,
+                        Total: total,
+                        DefaulterPercentage: (defaulters / total) * 100
+                    };
+                }).sort((a, b) => b.Total - a.Total); // Sort by total count
+                
+            } else {
+                // Simple Bar Chart (Filtered by Status)
+                const filteredData = data.filter(d => d.default === filterStatus);
+                aggregatedData = Array.from(d3.group(filteredData, d => d[category]), ([key, values]) => ({
+                    category: key,
+                    Count: values.length,
+                    Total: values.length,
+                    DefaulterPercentage: filterStatus === 'Defaulter' ? 100 : 0 // Placeholder
+                })).sort((a, b) => b.Count - a.Count); // Sort by count
+            }
+
+            const categories = aggregatedData.map(d => d.category);
+            
+            // 2. Scales & Setup
+            const x = d3.scaleBand().domain(categories).range([0, width]).padding(0.2);
+            
+            let yMax;
+            if (filterStatus === 'All') {
+                // Max height is the maximum total count of any category
+                yMax = d3.max(aggregatedData, d => d.Total);
+            } else {
+                // Max height is the maximum count in the filtered group
+                yMax = d3.max(aggregatedData, d => d.Count);
+            }
+            
+            const y = d3.scaleLinear().domain([0, yMax]).nice().range([height, 0]);
+
+            d3.select(`#${elementId}`).html('');
+            const svg = d3.select(`#${elementId}`)
+                .append("svg")
+                .attr("viewBox", `0 0 ${containerWidth} 300`)
+                .append("g")
+                .attr("transform", `translate(${MARGIN.left},${MARGIN.top})`);
+                
+            // 3. Drawing Logic
+            if (filterStatus === 'All') {
+                const groupKeys = ['Non-Defaulter', 'Defaulter'];
+                
+                // Scale for bars within the group
+                const xGroup = d3.scaleBand()
+                    .domain(groupKeys)
+                    .range([0, x.bandwidth()])
+                    .paddingInner(0.1);
+
+                // Create a group for each main category (SEX, EDUCATION, MARRIAGE)
+                svg.selectAll(".category-group")
+                    .data(aggregatedData)
+                    .join("g")
+                    .attr("class", "category-group")
+                    .attr("transform", d => `translate(${x(d.category)}, 0)`)
+                    .selectAll(".bar-segment")
+                    .data(d => groupKeys.map(key => ({
+                        key: key, 
+                        count: d[key], 
+                        total: d.Total,
+                        category: d.category
+                    })))
+                    .join("rect")
+                    .attr("class", "bar bar-segment")
+                    .attr("x", d => xGroup(d.key))
+                    .attr("y", d => y(d.count))
+                    .attr("height", d => height - y(d.count))
+                    .attr("width", xGroup.bandwidth())
+                    .attr("fill", d => COLORS[d.key])
+                    .on("mouseover", function(event, d) {
+                        const status = d.key;
+                        const count = d.count;
+                        const total = d.total;
+                        const percent = ((count / total) * 100).toFixed(1);
+                        tooltip.style("opacity", 1)
+                            .html(`
+                                <span class="font-bold">${d.category}</span><br>
+                                ${status}: ${count} (${percent}%)
+                            `);
+                        d3.select(this).style("filter", "brightness(1.1)");
+                    })
+                    .on("mousemove", (event) => {
+                        tooltip.style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 20) + "px");
+                    })
+                    .on("mouseleave", function() {
+                        tooltip.style("opacity", 0);
+                        d3.select(this).style("filter", "none");
+                    });
+
+                // Legend for Grouped Bars
+                const legend = svg.append("g").attr("transform", `translate(${width - 120}, 10)`);
+                groupKeys.forEach((status, i) => {
+                    legend.append("rect").attr("x", 0).attr("y", i * 20).attr("width", 10).attr("height", 10).attr("fill", COLORS[status]);
+                    legend.append("text").attr("x", 15).attr("y", i * 20 + 9).attr("class", "text-sm fill-gray-600").text(status);
+                });
+                
+            } else {
+                // Simple Bar Chart
+                svg.selectAll(".bar")
+                    .data(aggregatedData)
+                    .join("rect")
+                    .attr("class", "bar")
+                    .attr("x", d => x(d.category))
+                    .attr("y", d => y(d.Count))
+                    .attr("height", d => height - y(d.Count))
+                    .attr("width", x.bandwidth())
+                    .attr("fill", COLORS[filterStatus])
+                    .on("mouseover", function(event, d) {
+                        tooltip.style("opacity", 1)
+                            .html(`
+                                <span class="font-bold">${d.category}</span><br>
+                                Count: ${d.Count}
+                            `);
+                        d3.select(this).style("filter", "brightness(1.1)");
+                    })
+                    .on("mousemove", (event) => {
+                        tooltip.style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 20) + "px");
+                    })
+                    .on("mouseleave", function() {
+                        tooltip.style("opacity", 0);
+                        d3.select(this).style("filter", "none");
+                    });
+            }
+
+            // 4. Axes & Title
+            svg.append("g")
+                .attr("class", "axis x-axis")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x))
+                .selectAll("text");
+
+            svg.append("g")
+                .attr("class", "axis y-axis")
+                .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".2s")));
+
+            svg.append("text")
+                .attr("text-anchor", "middle")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -MARGIN.left + 15)
+                .attr("x", -height / 2)
+                .text("Client Count");
+
+            svg.append("text")
+                .attr("class", "chart-title")
+                .attr("x", width / 2)
+                .attr("y", -10)
+                .attr("text-anchor", "middle")
+                .text(title + (filterStatus !== 'All' ? ` (${filterStatus})` : ''));
+        }
+        
+        /**
+         * Creates a Violin Plot for a numerical variable vs Default Status.
+         */
+        function createViolinPlot(data, metric, title, elementId) {
+            const containerWidth = getContainerWidth(elementId);
+            const width = containerWidth - MARGIN.left - MARGIN.right;
+            const height = 400 - MARGIN.top - MARGIN.bottom;
+
+            const groups = ['Non-Defaulter', 'Defaulter'];
+            const groupWidth = 80; // Fixed width for the violin plot area
+
+            // 1. Prepare Data and Scales
+            const metricValues = data.map(d => d[metric]).filter(d => d != null);
+            const yDomain = [d3.min(metricValues) * 0.95, d3.max(metricValues) * 1.05];
+
+            // Y scale for the distribution values (vertical axis)
+            const y = d3.scaleLinear().domain(yDomain).range([height, 0]);
+            
+            // X scale for the groups (horizontal axis)
+            const x = d3.scaleBand().domain(groups).range([0, width]).padding(0.2);
+
+            // 2. Kernel Density Estimation (KDE)
+            
+            // D3 threshold function to match y scale
+            const thresholds = y.ticks(20); 
+
+            // KDE function (uses bandwidth to smooth the distribution)
+            const kde = (kernel, thresholds, data) => thresholds.map(t => [t, d3.mean(data, d => kernel(t - d))]);
+            
+            // Choose a kernel function (e.g., Epanechnikov)
+            const bandwidth = metric === 'LIMIT_BAL' ? 100000 : 5; // Heuristic bandwidth adjustment
+            const kernel = (x) => {
+                return Math.abs(x /= bandwidth) <= 1 ? 0.75 * (1 - x * x) / bandwidth : 0;
+            };
+
+            // Calculate density for each group
+            const densityData = Array.from(d3.group(data, d => d.default), ([group, values]) => {
+                const metricArray = values.map(d => d[metric]).filter(d => d != null);
+                const density = kde(kernel, thresholds, metricArray);
+                const maxDensity = d3.max(density, d => d[1]);
+                return {
+                    group: group,
+                    density: density,
+                    maxDensity: maxDensity,
+                    mean: d3.mean(metricArray),
+                    median: d3.median(metricArray)
+                };
+            }).filter(d => d.density.length > 0);
+            
+            // X scale for density (horizontal position of the violin shape)
+            const xNum = d3.scaleLinear()
+                .domain([0, d3.max(densityData, d => d.maxDensity) || 0])
+                .range([0, groupWidth / 2]); // Max width of half a violin
+
+            // 3. Area Generator (creates the violin shape)
+            const area = d3.area()
+                .x0(d => xNum(-d[1])) // Left side of the violin
+                .x1(d => xNum(d[1]))  // Right side of the violin
+                .y(d => y(d[0]))
+                .curve(d3.curveBasis);
+
+            // 4. SVG Setup
+            d3.select(`#${elementId}`).html('');
+            const svg = d3.select(`#${elementId}`)
+                .append("svg")
+                .attr("viewBox", `0 0 ${containerWidth} 400`)
+                .append("g")
+                .attr("transform", `translate(${MARGIN.left},${MARGIN.top})`);
+            
+            // 5. Drawing Violins and Markers
+            svg.selectAll(".violin-group")
+                .data(densityData)
+                .join("g")
+                .attr("class", "violin-group")
+                .attr("transform", d => `translate(${x(d.group) + x.bandwidth() / 2}, 0)`)
+                .each(function(d) {
+                    const group = d.group;
+                    const color = COLORS[group];
+                    
+                    // Draw the Violin Shape (Area)
+                    d3.select(this).append("path")
+                        .datum(d.density)
+                        .attr("class", `violin violin-${group.toLowerCase().replace('-', '')}`)
+                        .attr("d", area)
+                        .style("fill", color)
+                        .style("stroke", color)
+                        .style("stroke-width", 1)
+                        .style("opacity", 0.6)
+                        .on("mouseover", function(event) {
+                             tooltip.style("opacity", 1)
+                                .html(`
+                                    <span class="font-bold">${group} Distribution</span><br>
+                                    Mean: ${metric === 'LIMIT_BAL' ? d3.format(",.0f")(d.mean) : d3.format(".1f")(d.mean)}<br>
+                                    Median: ${metric === 'LIMIT_BAL' ? d3.format(",.0f")(d.median) : d3.format(".1f")(d.median)}
+                                `);
+                            d3.select(this).style("opacity", 0.8);
+                        })
+                        .on("mousemove", (event) => {
+                            tooltip.style("left", (event.pageX + 10) + "px")
+                                .style("top", (event.pageY - 20) + "px");
+                        })
+                        .on("mouseleave", function() {
+                            tooltip.style("opacity", 0);
+                            d3.select(this).style("opacity", 0.6);
+                        });
+
+                    // Draw Median Line
+                    d3.select(this).append("line")
+                        .attr("x1", -15).attr("x2", 15)
+                        .attr("y1", y(d.median)).attr("y2", y(d.median))
+                        .attr("stroke", "#1f2937") // Dark line for contrast
+                        .attr("stroke-width", 2.5);
+
+                    // Draw Mean Line
+                    d3.select(this).append("line")
+                        .attr("x1", -groupWidth / 2).attr("x2", groupWidth / 2)
+                        .attr("y1", y(d.mean)).attr("y2", y(d.mean))
+                        .attr("stroke", color)
+                        .attr("stroke-width", 1.5)
+                        .attr("stroke-dasharray", "4,4");
+                });
+            
+            // 6. Axes & Title
+            svg.append("g")
+                .attr("class", "axis x-axis")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            svg.append("g")
+                .attr("class", "axis y-axis")
+                .call(d3.axisLeft(y).ticks(5).tickFormat(metric === 'LIMIT_BAL' ? d3.format(".2s") : null));
+
+            svg.append("text")
+                .attr("text-anchor", "middle")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -MARGIN.left + 15)
+                .attr("x", -height / 2)
+                .text(metric === 'LIMIT_BAL' ? 'Credit Limit (NT$)' : 'Age (Years)');
+            
+            svg.append("text")
+                .attr("class", "chart-title")
+                .attr("x", width / 2)
+                .attr("y", -10)
+                .attr("text-anchor", "middle")
+                .text(title);
+
+            // 7. Legend
+            // ** LEGEND REMOVED AS REQUESTED **
+            // The mean/median information is now available on mouseover (tooltip)
+            // and the groups are labeled on the X-axis.
+        }
+        
+        // ** Function to Render Categorical Charts (UPDATED) **
+        function renderCategoricalCharts(data, filterStatus) {
+            // No filter needed for SEX
+            createStackedBarChart(data, 'SEX', 'Client Count by Gender', 'sex-chart', filterStatus);
+            
+            // Filter data for EDUCATION chart: exclude 'Other', 'Others', 'Unknown', and '0'
+            const educationFilterList = ['Other', 'Others', 'Unknown', '0'];
+            const educationFilteredData = data.filter(d => !educationFilterList.includes(d.EDUCATION));
+            createStackedBarChart(educationFilteredData, 'EDUCATION', 'Client Count by Education', 'education-chart', filterStatus);
+
+            // Filter data for MARRIAGE chart: exclude 'Other', 'Others', 'Unknown', and '0'
+            const marriageFilterList = ['Other', 'Others', 'Unknown', '0'];
+            const marriageFilteredData = data.filter(d => !marriageFilterList.includes(d.MARRIAGE));
+            createStackedBarChart(marriageFilteredData, 'MARRIAGE', 'Client Count by Marital Status', 'marriage-chart', filterStatus);
+        }
+        
+        // ** Resize Observer Function **
+        let billTrendDataCache, payAmtTrendDataCache, payStatusDataCache;
+        
+        const chartsToRedraw = () => {
+            // Get current filter status for categorical charts
+            const filterStatus = document.getElementById('default-status-filter').value;
+            
+            createLineChart(billTrendDataCache, 'AvgBillAmt', 'Average Bill Amount Trend (Months 1-6)', 'Average Bill Amount (NT$)', 'bill-amt-trend');
+            createLineChart(payAmtTrendDataCache, 'AvgPayAmt', 'Average Payment Amount Trend (Months 1-6)', 'Average Payment Amount (NT$)', 'pay-amt-trend');
+            createPaymentStatusChart(payStatusDataCache, 'pay-status-progression');
+            
+            renderCategoricalCharts(baseDefaultData, filterStatus);
+            
+            // D. Distribution Charts (Now Violin Plots)
+            createViolinPlot(baseDefaultData, 'LIMIT_BAL', 'Credit Limit Distribution by Default Status', 'limit-bal-chart');
+            createViolinPlot(baseDefaultData, 'AGE', 'Age Distribution by Default Status', 'age-chart');
+        };
+
+        // --- Data Loading and Dashboard Rendering ---
+
+        // 1. Load All Data Files
+        Promise.all([
+            d3.csv(dataPaths.default, d => ({
+                Client_ID: +d.Client_ID,
+                LIMIT_BAL: +d.LIMIT_BAL,
+                SEX: d.SEX,
+                EDUCATION: d.EDUCATION,
+                MARRIAGE: d.MARRIAGE,
+                AGE: +d.AGE,
+                default: mapDefaultStatus(d),
+            })).then(data => data.filter(d => d.default !== null)),
+            
+            d3.csv(dataPaths.bill, d => ({
+                Client_ID: +d.Client_ID,
+                Bill_Month: d.Bill_Month,
+                Bill_Amount: +d.Bill_Amount,
+                default: mapDefaultStatus(d),
+            })).then(data => data.filter(d => d.default !== null)),
+            
+            d3.csv(dataPaths.payAmt, d => ({
+                Client_ID: +d.Client_ID,
+                Pay_Amt_Month: d.Pay_Amt_Month,
+                Payment_Amount: +d.Payment_Amount,
+                default: mapDefaultStatus(d),
+            })).then(data => data.filter(d => d.default !== null)),
+            
+            d3.csv(dataPaths.payStatus, d => ({
+                Client_ID: +d.Client_ID,
+                Pay_Month: d.Pay_Month,
+                Pay_Status_Code: +d.Pay_Status_Code,
+                Pay_Status_Label: d.Pay_Status_Label,
+                default: mapDefaultStatus(d),
+            })).then(data => data.filter(d => d.default !== null)),
+            
+        ]).then(([defaultData, billData, payAmtData, payStatusData]) => {
+            document.getElementById('loading').remove(); 
+
+            if (defaultData.length === 0) {
+                console.error("No valid default data found.");
+                document.getElementById('categorical-comparisons').innerHTML = '<p class="text-red-500">Error: No valid base data found for visualization.</p>';
+                return;
+            }
+
+            console.log("Data loaded: Default:", defaultData.length, "Bill:", billData.length, "PayAmt:", payAmtData.length, "PayStatus:", payStatusData.length);
+            
+            // Store base data globally
+            baseDefaultData = defaultData;
+
+            // --- 2. Data Aggregation for Time-Series ---
+            
+            // Aggregation for Bill Amount Trend
+            billTrendDataCache = Array.from(d3.rollup(billData, 
+                v => d3.mean(v, d => d.Bill_Amount),
+                d => d.default,
+                d => d.Bill_Month
+            ), ([status, monthsMap]) => {
+                return Array.from(monthsMap, ([month, avgBillAmt]) => ({
+                    default: status,
+                    month: month,
+                    AvgBillAmt: avgBillAmt
+                }));
+            }).flat();
+            
+            // Aggregation for Payment Amount Trend
+            payAmtTrendDataCache = Array.from(d3.rollup(payAmtData, 
+                v => d3.mean(v, d => d.Payment_Amount),
+                d => d.default,
+                d => d.Pay_Amt_Month
+            ), ([status, monthsMap]) => {
+                return Array.from(monthsMap, ([month, avgPayAmt]) => ({
+                    default: status,
+                    month: month,
+                    AvgPayAmt: avgPayAmt
+                }));
+            }).flat();
+            
+            payStatusDataCache = payStatusData;
+            
+            // --- 3. Render Initial Charts ---
+
+            // A. Financial Trend Over Time (Line Charts)
+            createLineChart(billTrendDataCache, 'AvgBillAmt', 'Average Bill Amount Trend (Months 1-6)', 'Average Bill Amount (NT$)', 'bill-amt-trend');
+            createLineChart(payAmtTrendDataCache, 'AvgPayAmt', 'Average Payment Amount Trend (Months 1-6)', 'Average Payment Amount (NT$)', 'pay-amt-trend');
+            
+            // B. Delinquency Progression (Small Multiples 100% Stacked Bar)
+            createPaymentStatusChart(payStatusDataCache, 'pay-status-progression');
+
+            // C. Categorical Charts (Initial view: All Clients)
+            renderCategoricalCharts(baseDefaultData, 'All');
+            
+            // D. Distribution Charts (Now Violin Plots)
+            createViolinPlot(baseDefaultData, 'LIMIT_BAL', 'Credit Limit Distribution by Default Status', 'limit-bal-chart');
+            createViolinPlot(baseDefaultData, 'AGE', 'Age Distribution by Default Status', 'age-chart');
+
+            // ** Add Change Listener to the Dropdown **
+            d3.select('#default-status-filter').on('change', function() {
+                const newStatus = this.value;
+                console.log(`Filter changed to: ${newStatus}`);
+                renderCategoricalCharts(baseDefaultData, newStatus);
+            });
+            
+            // Add resize observer
+            new ResizeObserver(chartsToRedraw).observe(document.getElementById('financial-trends'));
+            new ResizeObserver(chartsToRedraw).observe(document.getElementById('pay-status-progression'));
+
+
+        }).catch(error => {
+            console.error("Error loading or processing data:", error);
+            document.getElementById('loading').innerHTML = `<p class="text-red-500">Error loading data: ${error.message}. Please ensure all necessary files are correctly accessible.</p>`;
+        });
+    </script>
+</body>
+</html>
