@@ -1,0 +1,1001 @@
+Client_ID,default ,SEX,EDUCATION,MARRIAGE,AGE,LIMIT_BAL,Pay_Amt_Month,Payment_Amount
+21038,Non-Defaulter,Male,High School,Married,37,80000,Month 1,3018
+19725,Non-Defaulter,Female,University,Single,28,270000,Month 5,2000
+12460,Non-Defaulter,Male,University,Single,43,290000,Month 1,5100
+25781,Non-Defaulter,Female,University,Married,32,200000,Month 1,0
+7525,Non-Defaulter,Female,University,Married,32,270000,Month 3,186
+17402,Non-Defaulter,Female,University,Single,48,50000,Month 4,160
+9718,Non-Defaulter,Female,University,Married,33,360000,Month 4,0
+12101,Non-Defaulter,Male,University,Married,41,120000,Month 1,2000
+25276,Defaulter,Female,University,Single,23,30000,Month 4,621
+11598,Non-Defaulter,Female,Graduate school,Single,44,300000,Month 4,0
+14825,Defaulter,Male,High School,Single,26,20000,Month 6,1000
+21125,Non-Defaulter,Male,University,Married,36,230000,Month 3,2500
+26068,Non-Defaulter,Female,Unknown,Married,32,500000,Month 5,2244
+5255,Defaulter,Male,University,Single,29,70000,Month 3,0
+29146,Defaulter,Female,High School,Married,70,230000,Month 2,5500
+29310,Defaulter,Male,University,Single,26,140000,Month 6,5000
+5929,Non-Defaulter,Female,University,Single,25,200000,Month 5,7354
+17290,Defaulter,Female,High School,Married,40,170000,Month 4,1000
+23244,Non-Defaulter,Female,High School,Married,39,140000,Month 5,4700
+26439,Non-Defaulter,Female,High School,Single,49,50000,Month 5,2000
+18429,Non-Defaulter,Female,Graduate school,Married,24,80000,Month 5,0
+15008,Non-Defaulter,Male,Graduate school,Single,36,240000,Month 5,5613
+11886,Non-Defaulter,Female,University,Single,37,220000,Month 1,4626
+18195,Non-Defaulter,Male,High School,Single,38,450000,Month 6,30000
+17039,Non-Defaulter,Female,Graduate school,Single,24,30000,Month 2,2000
+1930,Non-Defaulter,Male,University,Married,49,470000,Month 3,5100
+25020,Non-Defaulter,Male,High School,Married,65,220000,Month 4,2333
+13329,Defaulter,Female,Graduate school,Single,31,390000,Month 3,6000
+11555,Defaulter,Male,Graduate school,Married,42,150000,Month 4,0
+16387,Defaulter,Female,Graduate school,Single,29,160000,Month 6,0
+5781,Non-Defaulter,Female,High School,Single,31,120000,Month 6,1079
+14020,Non-Defaulter,Male,University,Married,42,500000,Month 1,50012
+904,Non-Defaulter,Male,High School,Married,50,100000,Month 1,0
+12852,Non-Defaulter,Male,University,Single,40,200000,Month 2,1310
+28312,Non-Defaulter,Female,High School,Married,38,100000,Month 2,7121
+9399,Non-Defaulter,Female,University,Single,48,390000,Month 2,10000
+24694,Non-Defaulter,Male,University,Single,44,420000,Month 3,5000
+6301,Non-Defaulter,Female,University,Single,24,30000,Month 1,1000
+13314,Defaulter,Female,High School,Single,26,30000,Month 4,2123
+13757,Non-Defaulter,Male,Graduate school,Single,27,50000,Month 4,713
+26426,Non-Defaulter,Female,University,Single,31,180000,Month 3,3000
+27936,Non-Defaulter,Female,University,Single,28,50000,Month 5,1155
+7116,Non-Defaulter,Female,University,Single,48,60000,Month 6,3000
+26502,Defaulter,Female,High School,Married,61,180000,Month 1,1353
+22767,Non-Defaulter,Female,University,Married,39,360000,Month 3,16243
+1249,Non-Defaulter,Female,High School,Single,42,180000,Month 3,17500
+9980,Defaulter,Male,Graduate school,Married,38,30000,Month 2,0
+17634,Non-Defaulter,Female,Graduate school,Married,30,140000,Month 2,0
+20265,Non-Defaulter,Female,High School,Married,72,150000,Month 2,0
+26002,Defaulter,Female,University,Married,31,110000,Month 3,416
+20548,Non-Defaulter,Male,Graduate school,Single,27,50000,Month 1,2034
+23447,Defaulter,Female,University,Married,39,80000,Month 5,1706
+10271,Non-Defaulter,Male,University,Single,46,50000,Month 3,655
+23306,Non-Defaulter,Female,University,Married,42,100000,Month 2,3168
+29579,Non-Defaulter,Male,University,Married,39,60000,Month 6,16711
+2039,Non-Defaulter,Female,University,Single,22,10000,Month 4,0
+24949,Non-Defaulter,Male,Graduate school,Married,42,200000,Month 6,15044
+15135,Non-Defaulter,Male,University,Single,51,50000,Month 3,1237
+1152,Non-Defaulter,Male,Graduate school,Single,30,280000,Month 4,6000
+13648,Defaulter,Female,Graduate school,Single,30,120000,Month 2,165
+11670,Non-Defaulter,Male,Graduate school,Single,32,210000,Month 4,12700
+6578,Non-Defaulter,Female,Graduate school,Married,41,160000,Month 1,7000
+16400,Non-Defaulter,Female,High School,Single,39,100000,Month 3,660
+9781,Non-Defaulter,Male,Graduate school,Married,42,210000,Month 3,2271
+3935,Non-Defaulter,Male,University,Single,27,50000,Month 1,1252
+24752,Non-Defaulter,Male,Graduate school,Married,38,330000,Month 6,821
+28436,Non-Defaulter,Female,University,Married,34,260000,Month 1,0
+11737,Defaulter,Female,Graduate school,Single,28,260000,Month 4,10000
+4407,Non-Defaulter,Male,University,Single,39,20000,Month 2,1302
+20721,Non-Defaulter,Male,Graduate school,Married,34,210000,Month 5,8249
+21087,Non-Defaulter,Male,University,Single,42,60000,Month 6,1101
+22256,Non-Defaulter,Female,Graduate school,Single,29,170000,Month 5,0
+22651,Non-Defaulter,Female,Graduate school,Single,37,250000,Month 4,2937
+28126,Non-Defaulter,Female,University,Married,43,20000,Month 1,0
+5548,Non-Defaulter,Female,University,Married,35,380000,Month 6,2068
+16211,Non-Defaulter,Female,University,Married,46,20000,Month 6,619
+4842,Non-Defaulter,Female,Graduate school,Single,27,170000,Month 3,10
+9058,Non-Defaulter,Female,University,Single,57,80000,Month 6,0
+2292,Non-Defaulter,Male,High School,Married,35,90000,Month 1,800
+2716,Non-Defaulter,Female,University,Married,31,50000,Month 3,649
+17681,Non-Defaulter,Female,Graduate school,Married,35,70000,Month 5,13032
+19635,Non-Defaulter,Female,University,Single,41,300000,Month 2,27863
+21427,Non-Defaulter,Female,University,Single,24,130000,Month 2,4500
+16621,Non-Defaulter,Male,University,Single,39,50000,Month 1,0
+11875,Non-Defaulter,Male,High School,Single,31,60000,Month 1,4000
+28565,Non-Defaulter,Female,Graduate school,Married,36,100000,Month 6,15638
+13558,Defaulter,Female,Graduate school,Single,28,130000,Month 6,1500
+10459,Non-Defaulter,Female,High School,Married,53,60000,Month 6,2134
+14059,Non-Defaulter,Male,University,Married,46,50000,Month 3,2000
+9712,Non-Defaulter,Female,University,Married,54,50000,Month 6,630
+22848,Non-Defaulter,Female,Graduate school,Single,36,310000,Month 4,2000
+25186,Non-Defaulter,Female,University,Single,22,30000,Month 3,1100
+19046,Non-Defaulter,Female,University,Married,30,90000,Month 3,1137
+10335,Non-Defaulter,Female,University,Single,23,70000,Month 6,10305
+14573,Defaulter,Male,Graduate school,Married,34,130000,Month 5,2000
+9686,Non-Defaulter,Male,High School,Single,39,20000,Month 4,13030
+29363,Non-Defaulter,Male,Graduate school,Single,28,80000,Month 2,9000
+28810,Non-Defaulter,Female,Graduate school,Married,36,280000,Month 2,416
+8630,Non-Defaulter,Male,Graduate school,Single,31,80000,Month 5,6018
+16178,Defaulter,Female,University,Single,29,50000,Month 1,0
+4454,Non-Defaulter,Male,High School,Married,45,50000,Month 3,0
+13828,Non-Defaulter,Female,Graduate school,Married,29,420000,Month 3,6860
+14314,Defaulter,Female,University,Single,23,60000,Month 3,1000
+21829,Non-Defaulter,Female,Graduate school,Single,27,270000,Month 2,0
+19253,Non-Defaulter,Female,Graduate school,Single,30,280000,Month 1,10300
+29149,Non-Defaulter,Female,University,Married,56,360000,Month 4,0
+15163,Non-Defaulter,Female,University,Single,26,300000,Month 1,1214
+20890,Defaulter,Male,Graduate school,Single,33,220000,Month 5,0
+6702,Non-Defaulter,Female,University,Married,45,30000,Month 2,2000
+6344,Defaulter,Male,High School,Married,53,150000,Month 2,1000
+15024,Non-Defaulter,Male,University,Married,39,110000,Month 1,4000
+10937,Defaulter,Female,University,Married,29,180000,Month 6,0
+13347,Defaulter,Female,Graduate school,Married,23,210000,Month 5,1500
+7769,Defaulter,Female,University,Married,27,70000,Month 6,2300
+22021,Non-Defaulter,Female,University,Single,25,30000,Month 3,3000
+24650,Non-Defaulter,Male,University,Married,39,170000,Month 3,582
+28677,Non-Defaulter,Female,Graduate school,Single,29,310000,Month 6,30000
+13232,Defaulter,Male,University,Single,23,20000,Month 5,0
+24347,Non-Defaulter,Male,Graduate school,Single,32,150000,Month 1,22365
+4237,Non-Defaulter,Male,High School,Married,55,230000,Month 1,10000
+4708,Defaulter,Female,University,Single,36,50000,Month 5,1345
+26055,Non-Defaulter,Female,University,Single,29,140000,Month 2,24000
+26816,Non-Defaulter,Male,University,Married,32,30000,Month 5,1000
+11451,Non-Defaulter,Male,University,Single,29,80000,Month 1,3007
+7115,Non-Defaulter,Male,Graduate school,Married,35,220000,Month 5,11000
+17348,Non-Defaulter,Female,University,Married,39,180000,Month 3,6100
+14164,Non-Defaulter,Male,High School,Single,23,20000,Month 6,0
+17761,Non-Defaulter,Female,High School,Married,62,80000,Month 6,1500
+6724,Defaulter,Male,Graduate school,Married,46,200000,Month 5,0
+4145,Defaulter,Female,Graduate school,Single,42,200000,Month 1,1320
+29754,Non-Defaulter,Male,Graduate school,Single,37,200000,Month 6,33436
+6112,Defaulter,Female,University,Married,36,120000,Month 2,4400
+9873,Non-Defaulter,Female,University,Single,23,50000,Month 2,1408
+12504,Defaulter,Female,Graduate school,Married,46,200000,Month 4,9400
+19947,Non-Defaulter,Female,University,Married,39,90000,Month 1,3000
+9179,Non-Defaulter,Male,University,Single,24,20000,Month 2,2000
+15260,Non-Defaulter,Female,University,Single,35,50000,Month 6,907
+10616,Non-Defaulter,Male,Graduate school,Married,35,400000,Month 6,10029
+17760,Non-Defaulter,Female,High School,Single,52,180000,Month 3,5464
+24141,Non-Defaulter,Male,University,Single,29,50000,Month 3,1300
+8496,Non-Defaulter,Male,High School,Married,58,150000,Month 4,7043
+15525,Non-Defaulter,Male,University,Single,36,80000,Month 6,1801
+14111,Non-Defaulter,Male,Graduate school,Single,28,120000,Month 2,600
+23177,Non-Defaulter,Female,University,Married,35,290000,Month 1,10000
+4719,Defaulter,Male,University,Single,30,80000,Month 3,3053
+5580,Defaulter,Female,High School,Married,58,30000,Month 3,3509
+5722,Defaulter,Female,High School,Single,27,30000,Month 3,1200
+8913,Non-Defaulter,Female,High School,Single,34,230000,Month 1,1394
+7273,Defaulter,Female,Graduate school,Single,31,50000,Month 3,3341
+26428,Non-Defaulter,Female,Graduate school,Single,32,220000,Month 1,8000
+7226,Non-Defaulter,Male,Graduate school,Single,33,150000,Month 1,5000
+10081,Non-Defaulter,Female,University,Married,53,60000,Month 4,1000
+13418,Defaulter,Male,University,Married,32,50000,Month 3,0
+28715,Non-Defaulter,Female,Graduate school,Single,44,170000,Month 5,482
+28176,Defaulter,Female,University,Married,32,20000,Month 6,602
+11332,Non-Defaulter,Male,University,Single,24,20000,Month 3,5300
+27712,Non-Defaulter,Female,University,Single,24,230000,Month 5,1500
+16692,Non-Defaulter,Male,University,Single,33,50000,Month 3,3502
+28416,Non-Defaulter,Female,University,Single,29,100000,Month 1,3400
+11908,Defaulter,Female,High School,Married,43,130000,Month 6,1800
+23160,Non-Defaulter,Female,High School,Married,47,230000,Month 3,4154
+10213,Non-Defaulter,Male,High School,Married,41,50000,Month 5,2000
+8919,Non-Defaulter,Male,High School,Single,30,200000,Month 6,2700
+3771,Non-Defaulter,Male,University,Single,53,80000,Month 3,1630
+26737,Defaulter,Male,University,Single,27,80000,Month 4,0
+791,Non-Defaulter,Female,University,Single,51,30000,Month 6,967
+19509,Non-Defaulter,Female,University,Single,32,110000,Month 1,2500
+28273,Non-Defaulter,Female,High School,Single,31,20000,Month 4,558
+9900,Non-Defaulter,Female,University,Single,34,360000,Month 3,8000
+5404,Non-Defaulter,Male,High School,Married,31,170000,Month 1,112000
+7122,Non-Defaulter,Female,University,Married,47,260000,Month 3,9000
+3369,Non-Defaulter,Female,University,Single,41,90000,Month 3,1164
+23401,Non-Defaulter,Female,Graduate school,Married,40,210000,Month 1,0
+15095,Defaulter,Male,Graduate school,Single,35,100000,Month 5,1000
+29189,Non-Defaulter,Male,University,Single,26,400000,Month 3,12677
+15618,Non-Defaulter,Female,University,Single,26,200000,Month 1,0
+9687,Non-Defaulter,Female,University,Single,24,60000,Month 5,2300
+28986,Non-Defaulter,Female,University,Single,35,180000,Month 3,900
+29922,Defaulter,Male,Graduate school,Single,34,410000,Month 2,18600
+13551,Non-Defaulter,Female,Graduate school,Single,22,20000,Month 1,487
+23768,Non-Defaulter,Female,Graduate school,Single,53,180000,Month 5,0
+28803,Non-Defaulter,Female,Graduate school,Single,34,140000,Month 1,0
+24015,Non-Defaulter,Male,University,Single,24,50000,Month 3,1300
+28435,Non-Defaulter,Female,University,Married,45,50000,Month 6,296
+10020,Defaulter,Male,Graduate school,Single,26,50000,Month 2,1996
+27437,Non-Defaulter,Male,University,Single,44,50000,Month 1,1300
+20331,Non-Defaulter,Female,University,Married,54,230000,Month 4,0
+25734,Non-Defaulter,Female,Graduate school,Single,29,270000,Month 3,0
+19472,Defaulter,Female,University,Married,32,180000,Month 2,0
+25178,Non-Defaulter,Female,High School,Married,22,50000,Month 5,700
+100,Defaulter,Male,University,Married,38,20000,Month 6,0
+26641,Defaulter,Male,Graduate school,Single,23,20000,Month 1,1300
+11930,Non-Defaulter,Male,University,Married,32,20000,Month 2,4500
+20461,Non-Defaulter,Male,Graduate school,Single,25,50000,Month 5,18584
+6851,Non-Defaulter,Male,Graduate school,Single,33,280000,Month 5,5500
+20862,Non-Defaulter,Male,University,Married,37,50000,Month 6,0
+25583,Non-Defaulter,Female,University,Married,34,140000,Month 5,2500
+14165,Non-Defaulter,Female,Graduate school,Single,31,210000,Month 4,5000
+3824,Non-Defaulter,Male,University,Married,39,200000,Month 1,3155
+11722,Non-Defaulter,Female,Graduate school,Married,48,500000,Month 4,9074
+8961,Non-Defaulter,Female,High School,Other,45,50000,Month 5,317
+16982,Non-Defaulter,Female,Graduate school,Single,25,210000,Month 4,3000
+16686,Non-Defaulter,Male,University,Single,36,50000,Month 3,2000
+27136,Non-Defaulter,Male,University,Married,47,500000,Month 6,14537
+22267,Defaulter,Female,Graduate school,Single,29,400000,Month 6,5800
+13211,Non-Defaulter,Female,University,Single,23,50000,Month 1,0
+12938,Non-Defaulter,Female,University,Single,30,160000,Month 5,0
+13025,Defaulter,Female,University,Married,48,240000,Month 4,954
+17243,Non-Defaulter,Female,University,Single,36,120000,Month 3,4170
+14809,Defaulter,Male,Graduate school,Married,35,170000,Month 4,635
+23207,Non-Defaulter,Female,Graduate school,Single,46,280000,Month 2,2726
+24949,Non-Defaulter,Male,Graduate school,Married,42,200000,Month 2,0
+26606,Defaulter,Male,University,Single,23,20000,Month 1,0
+26035,Defaulter,Female,Graduate school,Married,30,230000,Month 3,2610
+6650,Non-Defaulter,Female,Graduate school,Single,30,320000,Month 1,7500
+14094,Non-Defaulter,Female,Graduate school,Married,45,500000,Month 1,21507
+26387,Non-Defaulter,Female,Graduate school,Single,35,450000,Month 2,0
+10683,Non-Defaulter,Female,Graduate school,Single,33,480000,Month 2,30276
+14394,Defaulter,Male,High School,Single,42,30000,Month 1,0
+14053,Non-Defaulter,Female,University,Single,49,70000,Month 1,390
+27249,Non-Defaulter,Male,Graduate school,Single,39,440000,Month 1,3939
+2792,Non-Defaulter,Male,Graduate school,Single,33,20000,Month 6,500
+17542,Defaulter,Female,University,Single,37,20000,Month 2,1285
+28218,Non-Defaulter,Female,High School,Married,38,160000,Month 2,7100
+28092,Defaulter,Female,High School,Single,41,40000,Month 1,1971
+15306,Non-Defaulter,Female,University,Married,33,100000,Month 4,0
+27945,Non-Defaulter,Female,Graduate school,Single,28,180000,Month 1,3000
+20062,Non-Defaulter,Female,Others,Married,40,390000,Month 5,5859
+20755,Defaulter,Male,High School,Married,40,20000,Month 1,3200
+13117,Non-Defaulter,Male,Graduate school,Single,31,500000,Month 6,213405
+16901,Non-Defaulter,Male,High School,Single,38,50000,Month 4,2000
+20095,Defaulter,Female,University,Married,33,80000,Month 2,2100
+26172,Non-Defaulter,Female,University,Married,45,80000,Month 2,2511
+8088,Non-Defaulter,Male,University,Married,37,210000,Month 6,2000
+20346,Non-Defaulter,Female,High School,Single,65,80000,Month 2,4000
+8996,Non-Defaulter,Male,University,Married,49,160000,Month 1,435
+2554,Non-Defaulter,Female,Graduate school,Single,26,210000,Month 4,10790
+10354,Defaulter,Male,University,Single,43,20000,Month 6,1900
+10097,Non-Defaulter,Male,Graduate school,Single,24,30000,Month 1,2004
+22074,Non-Defaulter,Female,University,Single,29,400000,Month 4,0
+15538,Non-Defaulter,Male,University,Single,38,130000,Month 4,47766
+15768,Non-Defaulter,Female,University,Single,23,10000,Month 2,1272
+5313,Non-Defaulter,Female,University,Single,24,50000,Month 5,3000
+1183,Defaulter,Female,University,Married,55,90000,Month 1,4003
+11140,Non-Defaulter,Female,Graduate school,Married,37,60000,Month 5,2000
+29788,Non-Defaulter,Male,High School,Single,35,50000,Month 2,2160
+4322,Non-Defaulter,Female,University,Married,30,70000,Month 6,1000
+22273,Non-Defaulter,Female,University,Married,28,180000,Month 1,2000
+636,Non-Defaulter,Female,High School,Married,44,20000,Month 1,228
+17626,Non-Defaulter,Female,Graduate school,Single,33,140000,Month 3,7000
+24243,Non-Defaulter,Male,High School,Single,30,200000,Month 1,680
+25097,Defaulter,Male,High School,Single,53,20000,Month 3,18280
+23748,Defaulter,Female,University,Married,55,90000,Month 2,4003
+13714,Defaulter,Female,University,Single,32,80000,Month 6,570
+21619,Non-Defaulter,Female,University,Single,26,50000,Month 1,2078
+17772,Non-Defaulter,Female,High School,Single,60,70000,Month 1,1184
+17167,Non-Defaulter,Female,Graduate school,Single,26,20000,Month 4,721
+26279,Defaulter,Female,High School,Married,45,50000,Month 3,1120
+10980,Defaulter,Male,University,Married,44,50000,Month 4,2000
+12276,Non-Defaulter,Female,University,Single,38,50000,Month 1,5000
+3457,Non-Defaulter,Male,Graduate school,Single,29,50000,Month 1,0
+25820,Non-Defaulter,Female,Graduate school,Single,30,280000,Month 5,700
+19194,Non-Defaulter,Female,Graduate school,Single,32,200000,Month 3,4300
+18188,Non-Defaulter,Male,University,Married,37,130000,Month 4,1019
+10866,Non-Defaulter,Female,Graduate school,Single,25,20000,Month 4,800
+9198,Defaulter,Male,University,Single,27,20000,Month 2,1000
+23308,Defaulter,Female,Graduate school,Single,30,160000,Month 3,3000
+1012,Non-Defaulter,Female,Graduate school,Married,31,410000,Month 6,6384
+23708,Non-Defaulter,Female,University,Married,64,280000,Month 6,0
+9210,Non-Defaulter,Female,High School,Married,40,230000,Month 1,32254
+20499,Non-Defaulter,Male,University,Single,25,330000,Month 6,7900
+1804,Non-Defaulter,Female,Graduate school,Single,31,20000,Month 4,1357
+16908,Defaulter,Male,Graduate school,Married,35,100000,Month 1,0
+3230,Non-Defaulter,Female,Unknown,Single,27,130000,Month 2,4600
+3355,Non-Defaulter,Male,High School,Married,41,200000,Month 1,2544
+13183,Non-Defaulter,Male,Graduate school,Single,30,200000,Month 2,1200
+25991,Non-Defaulter,Female,University,Single,37,280000,Month 1,9000
+28143,Non-Defaulter,Female,Unknown,Single,44,430000,Month 6,15131
+19600,Non-Defaulter,Female,Graduate school,Single,36,290000,Month 1,2514
+14099,Defaulter,Male,University,Married,45,20000,Month 1,11
+5679,Non-Defaulter,Female,University,Married,40,150000,Month 3,1800
+22769,Defaulter,Female,High School,Married,44,60000,Month 1,2500
+5812,Non-Defaulter,Female,Graduate school,Married,34,210000,Month 1,10646
+19651,Non-Defaulter,Female,University,Married,32,200000,Month 1,5000
+11680,Non-Defaulter,Female,High School,Single,48,100000,Month 2,64886
+16996,Non-Defaulter,Female,High School,Single,23,30000,Month 1,0
+2990,Non-Defaulter,Female,High School,Married,36,50000,Month 2,25000
+25536,Non-Defaulter,Female,Graduate school,Single,35,360000,Month 2,17631
+5564,Non-Defaulter,Female,Graduate school,Single,25,210000,Month 3,4272
+24383,Defaulter,Male,University,Single,32,50000,Month 4,1700
+16424,Defaulter,Female,High School,Married,54,30000,Month 3,2800
+16655,Defaulter,Male,University,Single,30,10000,Month 2,2000
+235,Non-Defaulter,Female,University,Married,33,60000,Month 3,1000
+24816,Non-Defaulter,Male,University,Single,32,350000,Month 1,10013
+16793,Non-Defaulter,Male,University,Single,34,30000,Month 4,0
+6066,Non-Defaulter,Female,High School,Married,56,20000,Month 2,1500
+22647,Defaulter,Female,High School,Married,42,30000,Month 6,1390
+28030,Non-Defaulter,Female,University,Married,34,50000,Month 3,1776
+21162,Non-Defaulter,Male,High School,Single,34,90000,Month 3,2700
+7942,Non-Defaulter,Female,University,Married,36,20000,Month 4,2000
+20766,Non-Defaulter,Male,University,Married,42,50000,Month 2,1299
+1861,Non-Defaulter,Female,University,Single,24,20000,Month 5,6345
+14995,Non-Defaulter,Female,University,Single,26,50000,Month 2,780
+11438,Non-Defaulter,Female,University,Married,24,50000,Month 1,1500
+24265,Non-Defaulter,Male,University,Single,25,30000,Month 1,836
+14262,Defaulter,Male,High School,Married,57,20000,Month 6,0
+24726,Non-Defaulter,Male,University,Single,31,150000,Month 6,3632
+20413,Non-Defaulter,Male,Graduate school,Single,26,160000,Month 2,15199
+4607,Defaulter,Female,University,Married,31,50000,Month 2,3000
+1062,Non-Defaulter,Male,University,Married,49,50000,Month 5,2500
+5763,Non-Defaulter,Male,University,Married,27,20000,Month 1,2850
+24873,Non-Defaulter,Male,University,Single,36,160000,Month 2,735
+9374,Non-Defaulter,Female,High School,Married,45,30000,Month 1,0
+3473,Non-Defaulter,Female,University,Single,30,200000,Month 4,6504
+20436,Non-Defaulter,Male,University,Single,27,20000,Month 4,1623
+1001,Non-Defaulter,Male,University,Married,29,100000,Month 3,0
+28537,Non-Defaulter,Female,Graduate school,Married,32,80000,Month 4,1900
+24412,Non-Defaulter,Male,University,Single,32,190000,Month 3,1000
+11156,Non-Defaulter,Female,Graduate school,Single,37,210000,Month 5,7418
+4154,Non-Defaulter,Female,Graduate school,Single,30,280000,Month 2,10157
+27252,Non-Defaulter,Male,High School,Single,34,230000,Month 2,6500
+17514,Non-Defaulter,Female,University,Single,46,60000,Month 2,3002
+26545,Non-Defaulter,Female,High School,Married,64,180000,Month 3,6123
+16947,Non-Defaulter,Male,High School,Married,57,50000,Month 3,1200
+23048,Non-Defaulter,Female,Graduate school,Single,33,180000,Month 6,0
+29715,Non-Defaulter,Male,University,Single,36,20000,Month 6,2000
+6972,Non-Defaulter,Male,University,Single,37,20000,Month 4,1000
+3441,Non-Defaulter,Female,University,Single,27,350000,Month 2,1300
+7590,Non-Defaulter,Female,Graduate school,Single,27,50000,Month 2,1915
+20191,Non-Defaulter,Female,Graduate school,Single,31,350000,Month 2,5000
+8540,Non-Defaulter,Female,Graduate school,Single,37,100000,Month 4,0
+17575,Non-Defaulter,Female,High School,Married,45,80000,Month 4,1292
+110,Non-Defaulter,Male,University,Married,35,360000,Month 6,0
+11895,Non-Defaulter,Male,University,Married,32,60000,Month 2,4740
+14735,Non-Defaulter,Male,Graduate school,Married,40,200000,Month 6,310
+26281,Non-Defaulter,Female,Graduate school,Single,43,70000,Month 4,2000
+6375,Non-Defaulter,Male,Graduate school,Single,45,500000,Month 2,0
+27451,Non-Defaulter,Male,Graduate school,Single,33,200000,Month 3,2000
+29879,Defaulter,Male,High School,Married,36,340000,Month 1,10116
+22864,Non-Defaulter,Female,Graduate school,Single,32,350000,Month 5,10000
+26197,Non-Defaulter,Female,University,Married,33,310000,Month 3,3500
+9412,Non-Defaulter,Male,University,Married,55,110000,Month 1,6000
+4235,Non-Defaulter,Female,Graduate school,Single,33,260000,Month 1,2500
+14058,Non-Defaulter,Female,Graduate school,Married,28,360000,Month 3,6000
+18767,Non-Defaulter,Female,University,Single,28,230000,Month 4,20
+12734,Non-Defaulter,Male,University,Single,24,80000,Month 4,3118
+16903,Non-Defaulter,Male,High School,Single,46,20000,Month 6,183
+3414,Defaulter,Male,Graduate school,Single,33,150000,Month 6,0
+10303,Non-Defaulter,Male,Graduate school,Single,27,100000,Month 6,429
+11498,Defaulter,Male,Graduate school,Married,42,250000,Month 6,254000
+7794,Non-Defaulter,Female,University,Single,26,80000,Month 3,3000
+22581,Non-Defaulter,Female,Others,Single,31,150000,Month 3,0
+8818,Defaulter,Female,Graduate school,Single,24,60000,Month 5,10000
+4381,Non-Defaulter,Female,Graduate school,Married,35,430000,Month 5,29000
+3747,Non-Defaulter,Male,High School,Married,39,250000,Month 5,0
+1435,Non-Defaulter,Male,University,Single,44,30000,Month 5,1949
+982,Non-Defaulter,Male,University,Single,29,30000,Month 6,0
+25311,Non-Defaulter,Female,Graduate school,Single,25,230000,Month 2,5000
+28394,Non-Defaulter,Female,University,Married,37,160000,Month 2,3676
+15357,Non-Defaulter,Female,University,Married,33,440000,Month 3,0
+19889,Non-Defaulter,Female,High School,Married,48,20000,Month 2,1581
+12185,Non-Defaulter,Female,University,Married,32,70000,Month 1,2303
+24059,Non-Defaulter,Male,Others,Single,24,90000,Month 2,1176
+17073,Non-Defaulter,Female,Graduate school,Single,25,50000,Month 2,5000
+3219,Non-Defaulter,Male,Graduate school,Married,39,360000,Month 1,0
+27651,Non-Defaulter,Female,High School,Married,54,20000,Month 2,2300
+25826,Non-Defaulter,Female,University,Single,35,80000,Month 4,4849
+8192,Non-Defaulter,Female,University,Single,25,180000,Month 2,2115
+29060,Non-Defaulter,Female,High School,Married,52,30000,Month 5,1000
+12785,Defaulter,Female,Graduate school,Single,37,20000,Month 1,1000
+24083,Non-Defaulter,Male,University,Single,28,30000,Month 2,0
+9021,Non-Defaulter,Female,University,Married,42,170000,Month 3,1610
+20958,Non-Defaulter,Male,Graduate school,Single,33,50000,Month 6,0
+23807,Non-Defaulter,Female,Graduate school,Married,54,530000,Month 5,448
+17198,Non-Defaulter,Female,Graduate school,Married,28,30000,Month 6,2504
+9957,Non-Defaulter,Male,Graduate school,Married,46,320000,Month 2,3290
+12783,Non-Defaulter,Female,University,Married,29,130000,Month 2,5904
+29420,Non-Defaulter,Male,University,Single,30,230000,Month 1,5028
+7945,Defaulter,Female,University,Single,29,50000,Month 1,1300
+3879,Defaulter,Male,University,Married,26,20000,Month 6,0
+13628,Non-Defaulter,Female,Graduate school,Single,25,30000,Month 3,7
+27443,Non-Defaulter,Male,Graduate school,Married,45,300000,Month 2,0
+3365,Defaulter,Male,University,Married,28,140000,Month 2,7983
+13646,Non-Defaulter,Male,University,Single,32,230000,Month 6,5038
+9235,Non-Defaulter,Female,University,Single,33,40000,Month 4,1062
+4117,Defaulter,Female,High School,Single,26,70000,Month 2,2000
+19790,Non-Defaulter,Female,University,Married,41,90000,Month 2,4236
+15669,Non-Defaulter,Male,Graduate school,Single,27,410000,Month 4,17974
+995,Defaulter,Female,Graduate school,Single,29,290000,Month 6,0
+18668,Non-Defaulter,Female,University,Married,25,310000,Month 5,6005
+28750,Non-Defaulter,Female,Graduate school,Single,30,360000,Month 6,0
+18717,Non-Defaulter,Female,University,Single,26,150000,Month 4,257
+5881,Non-Defaulter,Male,Graduate school,Single,35,190000,Month 5,2007
+26341,Non-Defaulter,Female,Graduate school,Single,26,150000,Month 5,2000
+25050,Non-Defaulter,Male,High School,Single,54,50000,Month 1,2785
+23162,Non-Defaulter,Female,High School,Single,32,50000,Month 6,1822
+8193,Non-Defaulter,Male,University,Single,43,80000,Month 1,3318
+3372,Non-Defaulter,Female,University,Married,36,140000,Month 3,1900
+28756,Non-Defaulter,Female,Graduate school,Single,35,500000,Month 3,1114
+27014,Defaulter,Male,University,Married,43,50000,Month 3,650
+23867,Non-Defaulter,Male,University,Married,28,180000,Month 5,6200
+2854,Non-Defaulter,Female,University,Married,24,390000,Month 5,2000
+18472,Non-Defaulter,Female,Graduate school,Single,25,300000,Month 2,4040
+2315,Non-Defaulter,Female,University,Single,31,120000,Month 2,2000
+11313,Non-Defaulter,Male,University,Married,33,500000,Month 2,5016
+15767,Non-Defaulter,Female,Graduate school,Single,22,10000,Month 5,1000
+3634,Defaulter,Female,High School,Single,25,420000,Month 6,23011
+26031,Non-Defaulter,Female,Graduate school,Single,28,200000,Month 2,2659
+19182,Non-Defaulter,Female,Graduate school,Single,35,50000,Month 3,9400
+2900,Non-Defaulter,Female,University,Single,29,130000,Month 6,0
+27469,Non-Defaulter,Male,Graduate school,Single,47,390000,Month 4,128
+3638,Defaulter,Male,University,Married,34,20000,Month 1,1300
+6036,Defaulter,Male,Graduate school,Married,45,280000,Month 1,1703
+5939,Non-Defaulter,Female,University,Married,46,80000,Month 1,2000
+19511,Defaulter,Female,University,Married,49,90000,Month 4,2452
+27844,Non-Defaulter,Female,High School,Single,26,20000,Month 1,0
+28521,Non-Defaulter,Female,University,Married,47,50000,Month 3,1400
+17361,Defaulter,Female,University,Single,36,150000,Month 2,3000
+18238,Non-Defaulter,Male,Graduate school,Married,51,260000,Month 5,3000
+3494,Non-Defaulter,Female,University,Single,24,120000,Month 2,1000
+28508,Non-Defaulter,Female,University,Married,28,240000,Month 4,2500
+13158,Non-Defaulter,Female,High School,Married,36,480000,Month 1,1368
+22768,Non-Defaulter,Female,Graduate school,Single,38,620000,Month 2,1241
+1636,Non-Defaulter,Male,High School,Single,29,80000,Month 5,1767
+17628,Non-Defaulter,Female,University,Married,30,20000,Month 2,0
+13575,Non-Defaulter,Male,Graduate school,Single,37,60000,Month 5,1200
+1261,Non-Defaulter,Male,Graduate school,Single,37,150000,Month 1,3000
+19793,Non-Defaulter,Female,Graduate school,Married,45,320000,Month 3,370
+27401,Non-Defaulter,Male,High School,Single,47,20000,Month 5,4000
+25732,Non-Defaulter,Female,High School,Married,37,80000,Month 1,215
+22097,Non-Defaulter,Female,University,Single,29,260000,Month 2,7514
+9988,Non-Defaulter,Male,Graduate school,Single,27,10000,Month 5,1598
+12042,Non-Defaulter,Female,Graduate school,Single,44,120000,Month 4,1300
+24085,Non-Defaulter,Male,Graduate school,Single,27,180000,Month 5,72
+4741,Non-Defaulter,Male,University,Married,36,50000,Month 2,0
+22371,Non-Defaulter,Female,University,Married,29,200000,Month 5,5000
+24951,Non-Defaulter,Male,University,Married,35,50000,Month 4,0
+9154,Non-Defaulter,Male,University,Single,32,210000,Month 2,0
+15116,Defaulter,Male,High School,Married,51,50000,Month 5,707
+12460,Non-Defaulter,Male,University,Single,43,290000,Month 3,1500
+23188,Non-Defaulter,Female,University,Married,45,250000,Month 6,230
+17699,Non-Defaulter,Female,Graduate school,Married,46,130000,Month 5,3860
+28100,Defaulter,Female,University,Single,31,220000,Month 1,0
+24366,Non-Defaulter,Male,High School,Married,43,130000,Month 6,390
+1808,Non-Defaulter,Female,University,Single,27,150000,Month 4,2300
+19908,Non-Defaulter,Female,University,Married,44,80000,Month 4,1000
+20304,Non-Defaulter,Female,High School,Married,54,80000,Month 3,1500
+23942,Non-Defaulter,Male,University,Single,26,100000,Month 6,0
+9548,Non-Defaulter,Female,Graduate school,Single,30,360000,Month 4,53710
+20205,Non-Defaulter,Female,High School,Single,52,20000,Month 5,0
+18560,Non-Defaulter,Female,University,Single,24,50000,Month 1,2000
+29771,Defaulter,Male,Graduate school,Single,31,20000,Month 1,0
+4757,Non-Defaulter,Female,Graduate school,Single,27,170000,Month 4,3880
+6068,Non-Defaulter,Female,University,Single,28,90000,Month 4,0
+9559,Non-Defaulter,Female,High School,Single,44,100000,Month 4,2521
+24512,Non-Defaulter,Male,University,Married,46,50000,Month 4,1704
+29524,Defaulter,Male,University,Married,36,50000,Month 4,0
+9058,Non-Defaulter,Female,University,Single,57,80000,Month 2,0
+23614,Non-Defaulter,Female,High School,Single,35,150000,Month 3,1201
+646,Non-Defaulter,Male,High School,Single,39,150000,Month 1,5180
+2339,Non-Defaulter,Female,University,Single,27,150000,Month 6,352
+8006,Non-Defaulter,Female,University,Married,32,260000,Month 3,14044
+11104,Non-Defaulter,Female,High School,Single,33,240000,Month 1,9500
+28664,Defaulter,Female,University,Single,27,210000,Month 2,0
+4977,Non-Defaulter,Female,Graduate school,Single,31,210000,Month 5,0
+20044,Non-Defaulter,Female,University,Single,32,220000,Month 5,10000
+11663,Non-Defaulter,Female,University,Married,34,210000,Month 2,3892
+21401,Non-Defaulter,Female,Graduate school,Single,27,220000,Month 2,0
+26194,Non-Defaulter,Female,High School,Married,47,90000,Month 3,3566
+2358,Non-Defaulter,Female,University,Married,52,280000,Month 4,1407
+27642,Non-Defaulter,Female,University,Single,23,40000,Month 5,1500
+29319,Non-Defaulter,Male,University,Single,28,100000,Month 4,3786
+13721,Defaulter,Female,University,Single,27,100000,Month 3,3800
+24341,Non-Defaulter,Male,Graduate school,Married,38,140000,Month 5,9038
+16722,Non-Defaulter,Male,High School,Single,31,30000,Month 3,2000
+2896,Defaulter,Male,Graduate school,Married,43,200000,Month 3,4500
+23631,Defaulter,Female,University,Single,44,150000,Month 6,0
+10950,Defaulter,Female,Graduate school,Single,24,60000,Month 1,1553
+21784,Non-Defaulter,Female,Graduate school,Single,25,200000,Month 1,105
+2261,Non-Defaulter,Female,University,Single,37,80000,Month 6,1000
+15666,Non-Defaulter,Female,High School,Married,42,60000,Month 5,1130
+25208,Non-Defaulter,Female,University,Single,23,30000,Month 2,1529
+8720,Non-Defaulter,Male,Graduate school,Single,27,100000,Month 1,4000
+13752,Non-Defaulter,Female,Graduate school,Single,44,420000,Month 4,62
+12805,Non-Defaulter,Female,Graduate school,Single,34,500000,Month 6,0
+28089,Non-Defaulter,Female,University,Married,40,150000,Month 4,5049
+16445,Non-Defaulter,Female,University,Married,53,30000,Month 3,1500
+5311,Non-Defaulter,Female,High School,Single,31,100000,Month 3,3000
+13428,Non-Defaulter,Male,University,Single,24,50000,Month 2,1752
+10573,Non-Defaulter,Female,Graduate school,Single,29,360000,Month 4,0
+27223,Defaulter,Male,Graduate school,Single,30,160000,Month 6,325
+24780,Non-Defaulter,Male,University,Married,35,110000,Month 5,2862
+18435,Non-Defaulter,Female,University,Single,23,150000,Month 3,2100
+2060,Non-Defaulter,Male,University,Married,48,220000,Month 6,12249
+22594,Non-Defaulter,Female,Graduate school,Married,40,350000,Month 6,0
+19458,Non-Defaulter,Female,Graduate school,Single,37,200000,Month 1,4305
+22933,Non-Defaulter,Female,Graduate school,Married,32,80000,Month 2,3381
+17482,Non-Defaulter,Female,University,Single,33,40000,Month 1,1567
+14805,Defaulter,Male,University,Married,49,60000,Month 5,4005
+7742,Defaulter,Male,University,Single,22,50000,Month 4,16533
+9214,Non-Defaulter,Female,Graduate school,Married,37,200000,Month 5,71439
+10312,Non-Defaulter,Female,University,Married,45,110000,Month 5,1770
+9853,Non-Defaulter,Female,University,Single,25,20000,Month 1,2000
+12967,Defaulter,Male,University,Married,40,400000,Month 1,0
+13441,Defaulter,Female,University,Single,23,40000,Month 6,1400
+3141,Defaulter,Female,University,Single,49,20000,Month 5,3000
+24801,Non-Defaulter,Male,High School,Single,44,50000,Month 5,3600
+23730,Non-Defaulter,Female,High School,Married,52,50000,Month 2,1600
+1713,Defaulter,Male,High School,Married,33,180000,Month 4,15000
+21677,Non-Defaulter,Female,Graduate school,Single,23,50000,Month 4,1700
+1188,Non-Defaulter,Female,University,Married,50,50000,Month 3,364
+1227,Non-Defaulter,Female,High School,Married,41,240000,Month 1,5
+28855,Non-Defaulter,Female,Graduate school,Single,37,360000,Month 6,9000
+3093,Non-Defaulter,Male,University,Single,27,60000,Month 2,3900
+835,Non-Defaulter,Female,Graduate school,Single,23,20000,Month 3,3000
+19442,Non-Defaulter,Female,Graduate school,Single,45,30000,Month 1,0
+2953,Non-Defaulter,Female,University,Married,26,30000,Month 6,0
+780,Non-Defaulter,Female,University,Single,31,50000,Month 2,190
+16191,Defaulter,Female,University,Single,36,10000,Month 4,474
+14525,Non-Defaulter,Female,Graduate school,Single,31,380000,Month 3,202129
+809,Non-Defaulter,Female,Graduate school,Single,26,190000,Month 5,0
+2198,Non-Defaulter,Female,Graduate school,Married,47,1000000,Month 2,50723
+2020,Defaulter,Female,University,Married,36,50000,Month 3,1661
+2882,Non-Defaulter,Male,University,Single,23,50000,Month 2,1105
+1258,Non-Defaulter,Female,Graduate school,Single,28,180000,Month 1,4369
+11274,Non-Defaulter,Female,University,Single,29,50000,Month 1,2007
+27069,Defaulter,Male,University,Married,35,60000,Month 2,1200
+24146,Non-Defaulter,Male,Graduate school,Single,28,280000,Month 6,768
+5436,Non-Defaulter,Female,University,Single,41,240000,Month 6,5500
+9210,Non-Defaulter,Female,High School,Married,40,230000,Month 5,3466
+9176,Non-Defaulter,Male,University,Single,30,240000,Month 4,1000
+23180,Non-Defaulter,Female,University,Married,34,190000,Month 2,0
+1372,Non-Defaulter,Female,University,Single,30,180000,Month 3,10355
+27956,Non-Defaulter,Female,University,Married,27,140000,Month 4,0
+15290,Defaulter,Female,University,Married,48,130000,Month 5,390
+21754,Non-Defaulter,Female,University,Single,24,80000,Month 6,878
+6923,Non-Defaulter,Female,Graduate school,Single,35,260000,Month 2,1935
+2380,Non-Defaulter,Female,Graduate school,Married,41,500000,Month 3,6701
+15964,Non-Defaulter,Female,University,Married,35,70000,Month 3,3348
+257,Non-Defaulter,Female,University,Married,48,140000,Month 1,1233
+5335,Non-Defaulter,Female,High School,Single,25,80000,Month 5,2000
+16528,Non-Defaulter,Male,Graduate school,Single,27,140000,Month 6,2921
+11834,Non-Defaulter,Female,High School,Single,32,460000,Month 2,15000
+28064,Non-Defaulter,Female,High School,Married,44,50000,Month 1,3483
+2473,Non-Defaulter,Female,High School,Married,38,100000,Month 4,4000
+27508,Defaulter,Male,University,Married,54,80000,Month 2,3075
+19114,Non-Defaulter,Female,Graduate school,Single,30,210000,Month 6,5823
+24727,Defaulter,Male,High School,Single,42,150000,Month 6,0
+20266,Non-Defaulter,Female,High School,Married,50,100000,Month 5,3000
+12518,Non-Defaulter,Female,University,Single,32,280000,Month 1,0
+27823,Non-Defaulter,Female,University,Married,27,120000,Month 2,100
+18064,Non-Defaulter,Male,Graduate school,Married,34,150000,Month 5,826
+9017,Non-Defaulter,Female,University,Single,31,60000,Month 2,1400
+12455,Non-Defaulter,Male,Graduate school,Single,41,210000,Month 2,0
+7529,Defaulter,Female,Graduate school,Single,26,240000,Month 2,0
+23095,Defaulter,Female,High School,Married,49,180000,Month 2,5000
+13,Non-Defaulter,Female,University,Single,41,630000,Month 3,6500
+28688,Non-Defaulter,Female,University,Married,31,200000,Month 6,2508
+19509,Non-Defaulter,Female,University,Single,32,110000,Month 3,3300
+12978,Non-Defaulter,Male,University,Married,33,160000,Month 2,6200
+26182,Non-Defaulter,Female,University,Single,33,120000,Month 6,5000
+7375,Defaulter,Male,University,Single,38,180000,Month 5,2000
+24630,Defaulter,Male,Graduate school,Married,47,80000,Month 4,3096
+15070,Non-Defaulter,Male,Graduate school,Married,35,400000,Month 4,1699
+18331,Non-Defaulter,Female,University,Single,23,120000,Month 4,2000
+6280,Non-Defaulter,Female,University,Married,36,220000,Month 5,5761
+15145,Non-Defaulter,Female,Graduate school,Single,28,330000,Month 6,812
+3031,Non-Defaulter,Male,Graduate school,Married,37,120000,Month 2,52150
+4096,Non-Defaulter,Male,University,Single,43,80000,Month 2,1874
+23378,Defaulter,Female,University,Married,32,550000,Month 3,167622
+22315,Non-Defaulter,Female,University,Married,30,240000,Month 2,11366
+8286,Non-Defaulter,Male,University,Married,25,30000,Month 1,1389
+7400,Defaulter,Female,Graduate school,Single,26,40000,Month 3,200
+18552,Non-Defaulter,Female,University,Single,25,50000,Month 2,3359
+8902,Non-Defaulter,Female,Graduate school,Single,40,250000,Month 3,25185
+6862,Defaulter,Female,Graduate school,Single,31,210000,Month 5,3850
+26251,Non-Defaulter,Female,Graduate school,0,31,210000,Month 1,3848
+1019,Non-Defaulter,Female,High School,Married,40,240000,Month 4,1075
+23723,Non-Defaulter,Female,High School,Married,59,50000,Month 3,0
+7809,Non-Defaulter,Male,High School,Single,29,50000,Month 3,1000
+18746,Non-Defaulter,Female,University,Single,29,230000,Month 3,2000
+29554,Non-Defaulter,Male,Graduate school,Single,32,450000,Month 4,0
+26185,Defaulter,Female,University,Married,38,450000,Month 1,390
+2131,Defaulter,Male,Graduate school,Married,57,140000,Month 1,0
+8933,Defaulter,Female,University,Single,42,240000,Month 3,6900
+14462,Non-Defaulter,Male,Graduate school,Single,30,140000,Month 3,440
+7472,Non-Defaulter,Female,High School,Married,63,60000,Month 5,3000
+2901,Non-Defaulter,Male,Graduate school,Married,29,20000,Month 4,20191
+5545,Non-Defaulter,Male,Graduate school,Single,27,200000,Month 2,6331
+3788,Non-Defaulter,Female,Graduate school,Married,37,200000,Month 3,0
+13120,Non-Defaulter,Female,Graduate school,Married,42,120000,Month 3,5000
+16878,Defaulter,Male,University,Married,41,160000,Month 5,49326
+25911,Non-Defaulter,Female,University,Married,40,220000,Month 5,1000
+17307,Non-Defaulter,Female,University,Single,40,20000,Month 6,2016
+14884,Defaulter,Female,University,Single,26,20000,Month 2,0
+8223,Non-Defaulter,Female,University,Single,37,120000,Month 5,21742
+10620,Non-Defaulter,Male,University,Single,26,80000,Month 4,15
+23334,Non-Defaulter,Female,Graduate school,Single,36,150000,Month 6,3500
+23459,Non-Defaulter,Female,University,Married,44,80000,Month 2,0
+19960,Non-Defaulter,Female,High School,Married,45,20000,Month 4,780
+26469,Non-Defaulter,Female,University,Married,50,50000,Month 6,1000
+10101,Non-Defaulter,Female,Graduate school,Married,63,280000,Month 3,0
+23996,Non-Defaulter,Male,University,Married,25,80000,Month 6,1830
+29370,Non-Defaulter,Male,University,Single,28,320000,Month 6,2713
+11530,Non-Defaulter,Male,High School,Married,42,80000,Month 2,0
+3597,Defaulter,Male,University,Single,27,80000,Month 6,2041
+23489,Non-Defaulter,Female,Graduate school,Single,32,390000,Month 3,1500
+14737,Non-Defaulter,Female,University,Married,41,110000,Month 6,679
+19609,Non-Defaulter,Female,Others,Single,29,150000,Month 5,10000
+18440,Non-Defaulter,Female,High School,Single,23,30000,Month 5,1076
+117,Non-Defaulter,Male,Graduate school,Single,28,240000,Month 3,5676
+25017,Non-Defaulter,Male,University,Married,54,260000,Month 2,8201
+23788,Non-Defaulter,Female,University,Married,49,30000,Month 2,16101
+7151,Non-Defaulter,Female,High School,Married,54,230000,Month 5,1099
+16365,Non-Defaulter,Female,University,Married,34,230000,Month 6,3720
+24180,Non-Defaulter,Male,Graduate school,Single,30,360000,Month 4,685
+10065,Defaulter,Male,University,Single,28,60000,Month 4,1300
+12579,Non-Defaulter,Male,Graduate school,Married,56,500000,Month 4,36918
+27876,Defaulter,Female,University,Single,27,110000,Month 1,0
+15297,Non-Defaulter,Female,High School,Married,44,420000,Month 1,5526
+18214,Defaulter,Male,Graduate school,Other,50,300000,Month 2,80006
+13394,Non-Defaulter,Female,University,Married,35,200000,Month 6,3000
+1961,Defaulter,Female,University,Single,37,30000,Month 3,1178
+5257,Non-Defaulter,Female,High School,Other,55,260000,Month 2,8000
+13701,Non-Defaulter,Female,University,Single,28,10000,Month 2,1000
+12179,Non-Defaulter,Female,Graduate school,Married,35,260000,Month 5,1464
+267,Non-Defaulter,Male,High School,Single,23,10000,Month 6,175
+14252,Defaulter,Female,University,Married,26,100000,Month 4,1500
+11914,Defaulter,Female,University,Single,24,20000,Month 4,0
+24594,Non-Defaulter,Male,Graduate school,Single,47,290000,Month 6,5000
+23839,Defaulter,Female,High School,Other,53,50000,Month 6,600
+23425,Non-Defaulter,Female,Graduate school,Single,31,300000,Month 2,17865
+20689,Non-Defaulter,Male,Graduate school,Single,31,440000,Month 5,14501
+29263,Non-Defaulter,Male,High School,Single,24,10000,Month 3,2000
+24155,Defaulter,Male,University,Single,29,110000,Month 2,2500
+28583,Non-Defaulter,Female,Graduate school,Married,34,320000,Month 6,3090
+28013,Non-Defaulter,Female,Graduate school,Single,28,220000,Month 3,4000
+15940,Defaulter,Female,University,Married,32,30000,Month 5,0
+18862,Non-Defaulter,Female,University,Single,27,100000,Month 1,4000
+72,Defaulter,Male,University,Single,29,320000,Month 4,4800
+17575,Non-Defaulter,Female,High School,Married,45,80000,Month 6,1365
+29142,Non-Defaulter,Female,Graduate school,Married,52,480000,Month 2,18802
+23623,Non-Defaulter,Female,University,Married,40,300000,Month 4,0
+3333,Defaulter,Male,Graduate school,Married,59,500000,Month 1,0
+19610,Non-Defaulter,Female,University,Married,38,350000,Month 6,5000
+7856,Non-Defaulter,Female,University,Single,22,20000,Month 1,2000
+15835,Defaulter,Female,University,Single,27,360000,Month 6,0
+23787,Defaulter,Female,High School,Married,51,20000,Month 4,1000
+13312,Non-Defaulter,Female,Graduate school,Single,28,150000,Month 3,1159
+24435,Defaulter,Male,High School,Married,39,50000,Month 1,0
+11832,Non-Defaulter,Female,University,Single,28,160000,Month 2,1976
+687,Defaulter,Female,High School,Married,41,20000,Month 6,1000
+229,Defaulter,Male,University,Single,23,50000,Month 6,1004
+11516,Non-Defaulter,Male,Graduate school,Single,33,300000,Month 6,0
+25419,Defaulter,Female,Graduate school,Single,29,110000,Month 2,3875
+7505,Defaulter,Male,University,Married,60,120000,Month 2,1800
+13766,Non-Defaulter,Female,Graduate school,Single,31,160000,Month 6,0
+23157,Defaulter,Female,High School,Single,38,30000,Month 4,1500
+1464,Non-Defaulter,Female,University,Married,50,300000,Month 1,3131
+3265,Defaulter,Male,University,Married,62,20000,Month 2,1367
+9931,Non-Defaulter,Female,University,Married,36,50000,Month 6,2045
+12275,Defaulter,Female,University,Single,23,40000,Month 5,1270
+21760,Defaulter,Female,University,Single,24,50000,Month 3,1137
+4905,Non-Defaulter,Female,University,Single,22,30000,Month 5,1800
+4042,Non-Defaulter,Male,University,Single,36,20000,Month 2,0
+5815,Non-Defaulter,Male,High School,Single,25,10000,Month 6,6380
+1323,Non-Defaulter,Female,Graduate school,Married,42,360000,Month 4,10027
+16528,Non-Defaulter,Male,Graduate school,Single,27,140000,Month 4,3002
+18994,Non-Defaulter,Female,University,Single,28,30000,Month 2,3000
+15572,Non-Defaulter,Male,Graduate school,Married,50,500000,Month 1,6031
+25902,Non-Defaulter,Female,University,Married,36,240000,Month 4,6400
+23196,Non-Defaulter,Female,University,Single,48,10000,Month 5,258
+4615,Defaulter,Male,High School,Married,27,180000,Month 3,300
+6004,Non-Defaulter,Male,Graduate school,Single,36,500000,Month 2,35157
+3218,Non-Defaulter,Male,High School,Single,52,320000,Month 4,5000
+9008,Non-Defaulter,Female,Graduate school,Married,58,200000,Month 2,0
+15635,Non-Defaulter,Female,Graduate school,Married,38,200000,Month 5,5147
+18295,Non-Defaulter,Male,University,Married,55,150000,Month 4,200
+19054,Defaulter,Female,High School,Married,37,80000,Month 2,2500
+6653,Non-Defaulter,Female,High School,Married,50,530000,Month 6,5000
+11262,Non-Defaulter,Female,University,Single,27,120000,Month 5,1700
+1153,Defaulter,Female,University,Single,42,180000,Month 5,2100
+26088,Non-Defaulter,Female,University,Married,37,50000,Month 4,1410
+3615,Non-Defaulter,Male,High School,Single,32,150000,Month 4,10030
+2249,Defaulter,Female,Graduate school,Single,30,120000,Month 3,441
+23512,Non-Defaulter,Female,University,Single,32,350000,Month 5,0
+8365,Non-Defaulter,Male,University,Married,36,140000,Month 3,3000
+3868,Non-Defaulter,Female,Graduate school,Single,31,450000,Month 5,1000
+29368,Non-Defaulter,Male,University,Single,26,30000,Month 5,0
+28314,Non-Defaulter,Female,High School,Married,34,120000,Month 2,389
+25,Non-Defaulter,Male,Graduate school,Single,23,90000,Month 4,1200
+13608,Non-Defaulter,Female,Graduate school,Single,31,260000,Month 5,3000
+23736,Non-Defaulter,Female,University,Single,51,230000,Month 2,10000
+23028,Non-Defaulter,Female,Graduate school,Single,35,210000,Month 5,27977
+26169,Defaulter,Female,Graduate school,Married,47,30000,Month 6,1200
+26876,Non-Defaulter,Male,Graduate school,Single,35,280000,Month 2,7200
+15293,Non-Defaulter,Female,University,Married,45,200000,Month 3,3532
+4114,Non-Defaulter,Female,High School,Married,25,30000,Month 4,0
+14391,Non-Defaulter,Female,University,Married,34,310000,Month 3,1000
+2875,Non-Defaulter,Male,University,Single,25,20000,Month 4,3000
+7448,Defaulter,Female,University,Married,31,240000,Month 3,2367
+23459,Non-Defaulter,Female,University,Married,44,80000,Month 3,600
+27669,Defaulter,Female,Graduate school,Single,24,110000,Month 5,3982
+3785,Non-Defaulter,Male,Graduate school,Single,32,30000,Month 1,3600
+2635,Defaulter,Female,Graduate school,Married,42,200000,Month 4,0
+29440,Non-Defaulter,Male,Graduate school,Single,28,80000,Month 5,1500
+10993,Non-Defaulter,Female,Graduate school,Married,41,230000,Month 3,0
+26512,Non-Defaulter,Female,High School,Married,55,100000,Month 5,0
+5564,Non-Defaulter,Female,Graduate school,Single,25,210000,Month 1,1837
+20497,Defaulter,Male,University,Single,26,140000,Month 5,6000
+1375,Non-Defaulter,Male,University,Single,24,50000,Month 2,30300
+14274,Non-Defaulter,Male,Graduate school,Single,42,200000,Month 4,13500
+1418,Non-Defaulter,Female,Graduate school,Single,29,80000,Month 3,0
+6949,Non-Defaulter,Female,Graduate school,Single,35,180000,Month 1,7936
+22074,Non-Defaulter,Female,University,Single,29,400000,Month 2,994
+18202,Non-Defaulter,Male,Graduate school,Married,42,490000,Month 3,10000
+3185,Non-Defaulter,Female,University,Single,22,50000,Month 5,3861
+28947,Defaulter,Female,Graduate school,Married,37,500000,Month 2,15091
+20339,Non-Defaulter,Female,High School,Married,58,50000,Month 3,1500
+15318,Non-Defaulter,Female,Graduate school,Single,31,60000,Month 6,0
+8455,Defaulter,Female,Graduate school,Single,29,80000,Month 4,9390
+824,Non-Defaulter,Female,Graduate school,Single,22,20000,Month 5,1000
+8379,Non-Defaulter,Male,University,Married,39,60000,Month 2,5000
+981,Non-Defaulter,Female,Graduate school,Single,24,70000,Month 6,1952
+409,Non-Defaulter,Female,Graduate school,Single,27,320000,Month 6,11341
+7854,Non-Defaulter,Male,High School,Single,27,260000,Month 3,5184
+13795,Non-Defaulter,Male,University,Single,28,360000,Month 3,0
+29023,Non-Defaulter,Female,Graduate school,Single,28,90000,Month 3,2000
+12426,Non-Defaulter,Female,University,Single,26,140000,Month 1,1000
+18377,Non-Defaulter,Female,University,Single,23,100000,Month 6,2150
+3617,Non-Defaulter,Male,Graduate school,Single,29,10000,Month 3,4000
+16903,Non-Defaulter,Male,High School,Single,46,20000,Month 2,1838
+10699,Defaulter,Female,Graduate school,Married,39,200000,Month 2,0
+19724,Non-Defaulter,Female,Graduate school,Married,44,500000,Month 2,368199
+13884,Defaulter,Female,University,Married,35,740000,Month 6,7003
+13896,Defaulter,Male,University,Married,50,20000,Month 2,1000
+24249,Defaulter,Male,Graduate school,Single,31,90000,Month 2,0
+15334,Non-Defaulter,Female,University,Single,37,180000,Month 3,0
+1028,Non-Defaulter,Female,Graduate school,Single,41,450000,Month 1,75459
+26640,Non-Defaulter,Male,Graduate school,Single,26,90000,Month 5,1000
+9306,Defaulter,Male,University,Married,45,140000,Month 2,4000
+13209,Non-Defaulter,Male,University,Single,34,30000,Month 1,2003
+22049,Non-Defaulter,Female,University,Single,28,220000,Month 6,5574
+12225,Defaulter,Male,University,Single,28,80000,Month 1,107
+21520,Non-Defaulter,Female,University,Married,33,70000,Month 5,3000
+11051,Non-Defaulter,Male,Graduate school,Single,30,260000,Month 1,0
+14801,Defaulter,Male,High School,Single,36,110000,Month 3,0
+14146,Non-Defaulter,Male,Graduate school,Married,41,170000,Month 3,5012
+11172,Defaulter,Male,University,Married,37,70000,Month 3,0
+18075,Defaulter,Male,Graduate school,Single,34,40000,Month 5,0
+28165,Non-Defaulter,Female,Graduate school,Married,30,210000,Month 5,2000
+10089,Defaulter,Male,High School,Married,47,70000,Month 6,1909
+7433,Non-Defaulter,Male,University,Single,28,30000,Month 2,2064
+20654,Non-Defaulter,Male,University,Single,30,310000,Month 6,8205
+2768,Defaulter,Female,University,Single,24,80000,Month 4,3059
+7957,Non-Defaulter,Female,University,Single,23,30000,Month 3,0
+24824,Non-Defaulter,Male,Graduate school,Married,31,130000,Month 5,0
+16290,Defaulter,Female,High School,Married,41,100000,Month 5,7570
+17874,Non-Defaulter,Male,Graduate school,Single,29,130000,Month 1,0
+14299,Non-Defaulter,Female,University,Married,37,30000,Month 1,2000
+25805,Non-Defaulter,Female,University,Single,27,80000,Month 1,3500
+4034,Non-Defaulter,Female,Graduate school,Single,32,710000,Month 3,1616
+13847,Non-Defaulter,Male,High School,Married,45,90000,Month 2,1900
+21865,Defaulter,Female,University,Single,25,90000,Month 4,13500
+14092,Non-Defaulter,Female,Graduate school,Single,29,50000,Month 6,2000
+26772,Non-Defaulter,Male,Graduate school,Married,30,180000,Month 2,0
+25259,Non-Defaulter,Female,Graduate school,Single,23,80000,Month 6,3590
+16728,Defaulter,Male,University,Single,33,80000,Month 6,0
+10181,Defaulter,Female,University,Single,25,40000,Month 6,0
+28209,Non-Defaulter,Female,University,Single,38,370000,Month 4,3000
+21402,Defaulter,Female,University,Other,59,120000,Month 1,0
+17655,Non-Defaulter,Female,Graduate school,Married,41,240000,Month 2,10000
+20613,Non-Defaulter,Male,Graduate school,Single,26,70000,Month 4,5912
+4999,Non-Defaulter,Male,High School,Married,44,310000,Month 5,11000
+9961,Non-Defaulter,Female,University,Single,27,140000,Month 3,5500
+15960,Defaulter,Female,University,Married,34,50000,Month 4,0
+26141,Non-Defaulter,Female,University,Married,37,150000,Month 2,0
+967,Non-Defaulter,Male,Graduate school,Single,28,30000,Month 5,0
+27708,Non-Defaulter,Female,Graduate school,Single,25,150000,Month 6,1598
+16966,Non-Defaulter,Male,Graduate school,Married,56,140000,Month 4,1700
+15121,Non-Defaulter,Male,High School,Married,61,300000,Month 3,12001
+13126,Non-Defaulter,Male,Graduate school,Married,34,400000,Month 4,0
+15591,Non-Defaulter,Male,University,Single,51,110000,Month 1,2500
+14753,Non-Defaulter,Female,Graduate school,Single,26,200000,Month 5,4000
+5617,Non-Defaulter,Female,University,Married,35,20000,Month 1,1347
+18770,Non-Defaulter,Female,University,Married,26,80000,Month 4,11360
+9537,Defaulter,Female,University,Single,26,240000,Month 6,4000
+6316,Defaulter,Male,Graduate school,Single,24,10000,Month 6,0
+4831,Non-Defaulter,Male,University,Single,36,140000,Month 4,3000
+17184,Non-Defaulter,Female,University,Married,26,340000,Month 1,4500
+2230,Non-Defaulter,Female,University,Married,38,170000,Month 3,0
+29358,Non-Defaulter,Male,Graduate school,Single,28,70000,Month 6,1200
+23742,Defaulter,Female,Graduate school,Married,54,200000,Month 1,0
+15149,Defaulter,Male,Graduate school,Married,53,250000,Month 4,0
+15304,Defaulter,Female,High School,Married,41,140000,Month 4,4000
+21483,Non-Defaulter,Female,University,Single,35,490000,Month 3,5007
+10971,Defaulter,Male,University,Married,37,60000,Month 5,3000
+18774,Defaulter,Female,University,Single,27,50000,Month 2,2000
+13679,Non-Defaulter,Male,University,Married,22,20000,Month 5,0
+9893,Defaulter,Female,Graduate school,Single,25,150000,Month 3,10400
+8707,Non-Defaulter,Female,University,Married,36,270000,Month 3,12383
+3345,Defaulter,Female,High School,Married,29,30000,Month 6,1000
+19498,Non-Defaulter,Female,Unknown,Single,34,180000,Month 2,0
+8658,Defaulter,Female,Graduate school,Single,26,80000,Month 5,1000
+21963,Non-Defaulter,Female,Graduate school,Single,27,150000,Month 3,60260
+9555,Non-Defaulter,Female,High School,Married,48,200000,Month 2,0
+4288,Non-Defaulter,Male,Unknown,Single,23,60000,Month 3,1000
+2397,Non-Defaulter,Male,University,Married,29,200000,Month 1,2078
+8808,Non-Defaulter,Male,Graduate school,Married,49,280000,Month 3,10639
+22666,Non-Defaulter,Female,High School,Married,33,140000,Month 2,5000
+17336,Non-Defaulter,Female,High School,Married,36,500000,Month 5,169233
+8520,Non-Defaulter,Female,High School,Single,48,140000,Month 5,2000
+3977,Non-Defaulter,Female,University,Single,25,50000,Month 3,122
+18514,Defaulter,Female,University,Married,24,60000,Month 2,1460
+7194,Defaulter,Female,University,Single,26,150000,Month 6,3500
+9149,Defaulter,Female,University,Single,46,10000,Month 2,500
+19054,Defaulter,Female,High School,Married,37,80000,Month 1,3000
+27481,Non-Defaulter,Male,Graduate school,Married,57,500000,Month 5,28935
+5415,Non-Defaulter,Female,Graduate school,Married,44,280000,Month 6,5361
+5221,Non-Defaulter,Male,Graduate school,Single,35,170000,Month 2,5667
+9653,Non-Defaulter,Female,University,Married,26,300000,Month 2,316
+21375,Non-Defaulter,Male,University,Married,58,50000,Month 6,0
+28844,Non-Defaulter,Female,Graduate school,Married,41,180000,Month 2,6000
+21376,Non-Defaulter,Male,High School,Married,54,760000,Month 5,20000
+21691,Non-Defaulter,Female,University,Single,25,40000,Month 3,0
+12034,Non-Defaulter,Female,Others,Single,23,150000,Month 5,1155
+5475,Defaulter,Female,Graduate school,Single,36,290000,Month 1,7594
+6573,Non-Defaulter,Female,Graduate school,Single,26,90000,Month 6,1197
+803,Non-Defaulter,Female,High School,Married,44,50000,Month 3,7472
+25798,Defaulter,Female,Graduate school,Single,38,100000,Month 3,1500
+10738,Non-Defaulter,Female,Graduate school,Married,39,160000,Month 6,2000
+19254,Non-Defaulter,Female,University,Married,44,70000,Month 6,1000
+13336,Defaulter,Male,High School,Single,28,100000,Month 1,3184
+11638,Non-Defaulter,Male,University,Single,28,50000,Month 5,2500
+27374,Non-Defaulter,Male,Graduate school,Single,34,450000,Month 5,7519
+1811,Non-Defaulter,Male,University,Single,36,20000,Month 5,1500
+12004,Non-Defaulter,Male,University,Married,35,30000,Month 2,0
+12235,Defaulter,Male,University,Married,30,110000,Month 1,7000
+27871,Non-Defaulter,Female,Graduate school,Single,27,140000,Month 6,0
+1834,Non-Defaulter,Male,High School,Single,24,60000,Month 1,3000
+26324,Non-Defaulter,Female,Graduate school,Single,36,450000,Month 1,4579
+9391,Non-Defaulter,Male,Graduate school,Single,42,400000,Month 5,44257
+19508,Non-Defaulter,Female,University,Married,32,240000,Month 2,0
+9025,Non-Defaulter,Female,Graduate school,Married,37,140000,Month 5,1729
+10212,Defaulter,Female,University,Married,34,160000,Month 4,1000
+26318,Non-Defaulter,Female,University,Married,38,280000,Month 4,6000
+24987,Non-Defaulter,Male,High School,Married,38,20000,Month 2,19648
+22717,Non-Defaulter,Female,University,Married,36,240000,Month 5,8000
+18470,Non-Defaulter,Female,Graduate school,Single,26,110000,Month 2,1872
+29529,Non-Defaulter,Male,University,Married,47,20000,Month 3,3200
+16557,Non-Defaulter,Male,University,Single,27,180000,Month 5,4200
+22095,Defaulter,Female,University,Married,28,230000,Month 5,2000
+22568,Defaulter,Male,Graduate school,Single,31,280000,Month 5,0
+10118,Non-Defaulter,Female,Graduate school,Single,29,220000,Month 2,2646
+21753,Non-Defaulter,Female,Graduate school,Single,24,50000,Month 5,1500
+2217,Non-Defaulter,Female,Graduate school,Single,36,300000,Month 6,0
+16111,Defaulter,Female,University,Married,33,200000,Month 3,2083
+25792,Non-Defaulter,Female,University,Married,45,360000,Month 3,4100
+17321,Non-Defaulter,Female,University,Single,29,30000,Month 6,0
+10044,Non-Defaulter,Male,University,Married,50,50000,Month 2,1289
+4220,Non-Defaulter,Female,Graduate school,Single,30,340000,Month 6,0
+21305,Non-Defaulter,Male,Graduate school,Married,50,260000,Month 6,0
+5381,Non-Defaulter,Male,University,Single,23,20000,Month 6,1000
+21287,Non-Defaulter,Male,High School,Married,57,110000,Month 1,390
+21638,Non-Defaulter,Female,Graduate school,Single,23,10000,Month 3,1681
+7184,Non-Defaulter,Female,University,Single,21,20000,Month 1,1005
+20261,Non-Defaulter,Female,University,Single,51,150000,Month 3,0
+5214,Non-Defaulter,Female,University,Married,30,500000,Month 1,5757
+25602,Non-Defaulter,Female,Unknown,Other,40,200000,Month 3,9117
+9536,Non-Defaulter,Male,Graduate school,Single,26,200000,Month 3,189
+24816,Non-Defaulter,Male,University,Single,32,350000,Month 5,6000
+4074,Non-Defaulter,Male,University,Single,49,120000,Month 5,3000
+10419,Defaulter,Male,Graduate school,Married,64,500000,Month 2,0
+19958,Non-Defaulter,Female,University,Married,45,50000,Month 5,0
+21486,Defaulter,Female,University,Married,24,20000,Month 2,1500
+958,Defaulter,Female,Graduate school,Married,34,200000,Month 2,1024
+12328,Non-Defaulter,Female,University,Married,46,200000,Month 3,0
+11259,Defaulter,Male,University,Married,38,250000,Month 6,6032
+20278,Non-Defaulter,Female,High School,Married,53,100000,Month 4,3000
+25029,Non-Defaulter,Male,High School,Married,61,460000,Month 6,4500
+21564,Non-Defaulter,Female,High School,Single,23,30000,Month 1,0
+12880,Non-Defaulter,Female,Graduate school,Married,32,200000,Month 1,9216
+18676,Non-Defaulter,Female,Graduate school,Single,29,130000,Month 1,430
+10624,Non-Defaulter,Female,High School,Married,27,50000,Month 1,2000
+23769,Non-Defaulter,Female,University,Married,50,50000,Month 4,624
+6410,Non-Defaulter,Male,University,Single,48,80000,Month 2,2000
+19909,Defaulter,Female,University,Single,31,80000,Month 4,1050
+19796,Non-Defaulter,Female,University,Single,43,290000,Month 1,5007
+2157,Defaulter,Female,Graduate school,Single,25,290000,Month 2,10500
+1666,Non-Defaulter,Male,University,Married,31,30000,Month 4,0
+25555,Non-Defaulter,Female,High School,Single,40,450000,Month 6,2277
+23404,Non-Defaulter,Female,Graduate school,Single,33,50000,Month 6,1000
+15474,Non-Defaulter,Male,Graduate school,Married,39,360000,Month 4,0
+2318,Non-Defaulter,Male,University,Married,46,50000,Month 3,600
+3017,Non-Defaulter,Male,Graduate school,Single,22,20000,Month 3,700
+20420,Non-Defaulter,Male,Graduate school,Single,24,50000,Month 4,1000
+21491,Non-Defaulter,Female,University,Single,29,200000,Month 6,2000
+2760,Non-Defaulter,Female,Graduate school,Single,31,150000,Month 5,315
+16137,Non-Defaulter,Female,University,Married,37,220000,Month 1,0
+17072,Defaulter,Female,University,Married,26,50000,Month 6,500
+28287,Defaulter,Female,University,Married,32,30000,Month 1,0
+3066,Defaulter,Male,Graduate school,Single,25,70000,Month 3,624
+23281,Non-Defaulter,Female,University,Married,36,250000,Month 5,10076
+397,Non-Defaulter,Male,Graduate school,Single,38,100000,Month 6,0
+20048,Non-Defaulter,Female,Graduate school,Married,44,180000,Month 4,0
+12814,Non-Defaulter,Male,University,Married,58,120000,Month 4,396
+10630,Non-Defaulter,Male,University,Single,33,210000,Month 6,1472
+16865,Non-Defaulter,Male,Graduate school,Single,38,30000,Month 6,40000
+8685,Non-Defaulter,Female,High School,Single,34,150000,Month 2,264
+21485,Non-Defaulter,Female,University,Single,23,50000,Month 3,2000
+7690,Defaulter,Male,University,Married,35,110000,Month 2,3000
+25847,Non-Defaulter,Female,University,Married,27,80000,Month 6,3001
+2012,Non-Defaulter,Male,Graduate school,Married,51,150000,Month 4,4224
+12906,Non-Defaulter,Female,Graduate school,Single,33,400000,Month 6,24096
+7066,Non-Defaulter,Female,Graduate school,Single,25,70000,Month 4,376
+3654,Non-Defaulter,Male,High School,Married,51,100000,Month 5,5056
+4274,Defaulter,Male,Graduate school,Married,49,200000,Month 1,416
+4222,Defaulter,Female,Graduate school,Married,36,150000,Month 1,20000
+29138,Non-Defaulter,Female,University,Married,51,330000,Month 6,6000
+24032,Non-Defaulter,Male,Graduate school,Single,26,80000,Month 4,6600
+12786,Non-Defaulter,Female,University,Married,40,240000,Month 6,2529
+3591,Non-Defaulter,Male,University,Married,47,20000,Month 6,0
+8499,Non-Defaulter,Male,University,Single,34,10000,Month 6,200
+6210,Non-Defaulter,Female,Graduate school,Single,30,150000,Month 2,8000
+593,Non-Defaulter,Male,Graduate school,Married,35,50000,Month 2,1074
+20157,Non-Defaulter,Female,University,Married,40,150000,Month 6,2500
+16328,Non-Defaulter,Female,Graduate school,Married,49,180000,Month 2,0
+12860,Non-Defaulter,Male,Graduate school,Married,41,170000,Month 3,5000
+7300,Non-Defaulter,Female,High School,Married,49,90000,Month 6,2006
+15513,Defaulter,Male,University,Married,37,30000,Month 2,1500
+22935,Non-Defaulter,Female,Graduate school,Single,29,230000,Month 4,3900
+18399,Non-Defaulter,Female,University,Single,23,210000,Month 3,5000
+28195,Non-Defaulter,Female,High School,Married,49,130000,Month 3,1500
+26200,Non-Defaulter,Female,University,Single,39,210000,Month 1,7100
+16793,Non-Defaulter,Male,University,Single,34,30000,Month 6,3400
+29473,Non-Defaulter,Male,University,Married,32,250000,Month 4,0
+29257,Non-Defaulter,Male,High School,Single,24,20000,Month 2,1319
+2121,Non-Defaulter,Female,Graduate school,Single,28,90000,Month 5,1350
+15467,Non-Defaulter,Male,Graduate school,Single,30,220000,Month 6,5000
+5179,Non-Defaulter,Male,Graduate school,Married,39,260000,Month 5,9307
+23083,Defaulter,Female,Graduate school,Married,47,100000,Month 6,2500
+4856,Defaulter,Female,Graduate school,Single,35,50000,Month 6,400
+5157,Non-Defaulter,Male,Graduate school,Single,30,150000,Month 1,2087
+16265,Defaulter,Female,University,Married,40,70000,Month 5,936
+12894,Non-Defaulter,Female,University,Married,39,320000,Month 3,4001
+21049,Defaulter,Male,University,Married,38,100000,Month 2,2438
+25577,Non-Defaulter,Male,High School,Single,46,210000,Month 5,3000
+2531,Defaulter,Male,University,Single,24,30000,Month 6,0
+29219,Non-Defaulter,Male,University,Single,24,60000,Month 5,3000
+5369,Non-Defaulter,Female,University,Married,44,100000,Month 4,3200
+27749,Defaulter,Female,University,Single,26,130000,Month 2,5200
+14899,Non-Defaulter,Female,University,Married,40,360000,Month 2,0
+22208,Non-Defaulter,Female,Graduate school,Single,24,110000,Month 1,6001
+17680,Non-Defaulter,Female,Graduate school,Single,34,70000,Month 3,1500
+4508,Defaulter,Male,High School,Single,42,30000,Month 3,6
+3158,Non-Defaulter,Female,Graduate school,Single,26,50000,Month 4,5003
+26633,Non-Defaulter,Male,Graduate school,Single,25,10000,Month 5,500
+22782,Non-Defaulter,Female,University,Single,46,120000,Month 6,1500
+5608,Non-Defaulter,Female,University,Single,32,300000,Month 3,3500
+12683,Non-Defaulter,Female,University,Other,41,30000,Month 2,1314
+27452,Non-Defaulter,Male,University,Single,42,110000,Month 4,6000
+23810,Non-Defaulter,Female,University,Married,50,410000,Month 5,13900
+13316,Defaulter,Female,University,Married,40,240000,Month 1,0
+28756,Non-Defaulter,Female,Graduate school,Single,35,500000,Month 2,1244
+2655,Non-Defaulter,Female,High School,Single,23,50000,Month 5,1
+15521,Non-Defaulter,Male,University,Single,32,180000,Month 4,1943
+24695,Non-Defaulter,Male,University,Married,29,60000,Month 6,2000
+20260,Non-Defaulter,Female,High School,Married,57,80000,Month 2,0
+7905,Non-Defaulter,Female,Graduate school,Married,50,90000,Month 3,2300
+8700,Non-Defaulter,Male,High School,Married,37,10000,Month 2,1120
+13471,Defaulter,Male,Graduate school,Married,36,200000,Month 2,0
+21522,Non-Defaulter,Female,University,Single,22,50000,Month 3,1344
+26208,Non-Defaulter,Female,High School,Married,36,180000,Month 1,1034
+23031,Defaulter,Female,Graduate school,Married,33,150000,Month 5,4000
+6723,Non-Defaulter,Male,Graduate school,Married,47,560000,Month 1,69803
+23879,Non-Defaulter,Male,University,Single,25,60000,Month 3,1291
+28834,Non-Defaulter,Female,Graduate school,Married,45,50000,Month 1,0
+28362,Non-Defaulter,Female,Graduate school,Married,40,200000,Month 4,2619
+27059,Non-Defaulter,Male,University,Single,34,100000,Month 3,1000
+4879,Non-Defaulter,Female,Graduate school,Single,27,80000,Month 2,917
+27104,Non-Defaulter,Male,Graduate school,Single,30,220000,Month 3,301
+22890,Non-Defaulter,Female,University,Married,42,280000,Month 2,396
+20430,Defaulter,Male,Graduate school,Single,24,10000,Month 3,2000
+8264,Non-Defaulter,Male,University,Married,42,350000,Month 1,1365
+9628,Non-Defaulter,Male,Graduate school,Single,36,460000,Month 5,3551
+14068,Non-Defaulter,Male,High School,Single,44,50000,Month 3,2000
+17853,Non-Defaulter,Male,Graduate school,Single,26,150000,Month 1,2000
+22840,Non-Defaulter,Female,High School,Married,38,120000,Month 3,5000
+27868,Non-Defaulter,Female,University,Single,26,140000,Month 3,94422
+9129,Non-Defaulter,Female,Graduate school,Married,39,420000,Month 1,14000
+9834,Non-Defaulter,Female,High School,Married,41,30000,Month 3,11216
+2983,Non-Defaulter,Female,Graduate school,Single,30,170000,Month 3,1842
+29080,Non-Defaulter,Female,University,Married,55,400000,Month 4,2173
+22988,Non-Defaulter,Female,Graduate school,Single,38,80000,Month 4,19884
+2735,Non-Defaulter,Female,University,Single,47,240000,Month 3,10318
+28569,Non-Defaulter,Female,High School,Married,40,180000,Month 1,4262
+2283,Non-Defaulter,Female,High School,Married,49,90000,Month 2,3382
+4351,Defaulter,Female,Graduate school,Single,34,170000,Month 6,326
+20688,Non-Defaulter,Male,Graduate school,Single,28,180000,Month 1,5100
+15557,Non-Defaulter,Male,Graduate school,Married,42,500000,Month 1,1500
